@@ -9,7 +9,7 @@ local ServerDestruction = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local SetSkybox = Instance.new("TextButton")
 local DecalSpam = Instance.new("TextButton")
-local SetSkybox_2 = Instance.new("TextButton")
+local SetFire = Instance.new("TextButton")
 local AdminRanker = Instance.new("Frame")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
@@ -81,17 +81,17 @@ DecalSpam.Text = "Decal Spam"
 DecalSpam.TextColor3 = Color3.fromRGB(255, 255, 255)
 DecalSpam.TextSize = 14.000
 
-SetSkybox_2.Name = "Set Skybox"
-SetSkybox_2.Parent = ServerDestruction
-SetSkybox_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-SetSkybox_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
-SetSkybox_2.BorderSizePixel = 3
-SetSkybox_2.Position = UDim2.new(0, 0, 0, 66)
-SetSkybox_2.Size = UDim2.new(0.5, 0, 0, 30)
-SetSkybox_2.Font = Enum.Font.SourceSans
-SetSkybox_2.Text = "Fire All Parts"
-SetSkybox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-SetSkybox_2.TextSize = 14.000
+SetFire.Name = "Set Fire"
+SetFire.Parent = ServerDestruction
+SetFire.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SetFire.BorderColor3 = Color3.fromRGB(255, 0, 0)
+SetFire.BorderSizePixel = 3
+SetFire.Position = UDim2.new(0, 0, 0, 66)
+SetFire.Size = UDim2.new(0.5, 0, 0, 30)
+SetFire.Font = Enum.Font.SourceSans
+SetFire.Text = "Fire All Parts"
+SetFire.TextColor3 = Color3.fromRGB(255, 255, 255)
+SetFire.TextSize = 14.000
 
 AdminRanker.Name = "Admin Ranker"
 AdminRanker.Parent = Page1
@@ -193,7 +193,7 @@ CloseOpen.TextSize = 18.000
 
 -- Scripts:
 
-local function QADA_script() -- SetSkybox.LocalScript 
+local function JIQMVRL_script() -- SetSkybox.LocalScript 
 	local script = Instance.new('LocalScript', SetSkybox)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -209,8 +209,8 @@ local function QADA_script() -- SetSkybox.LocalScript
 		
 	end)
 end
-coroutine.wrap(QADA_script)()
-local function RRJP_script() -- DecalSpam.LocalScript 
+coroutine.wrap(JIQMVRL_script)()
+local function LHKF_script() -- DecalSpam.LocalScript 
 	local script = Instance.new('LocalScript', DecalSpam)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -226,9 +226,9 @@ local function RRJP_script() -- DecalSpam.LocalScript
 		
 	end)
 end
-coroutine.wrap(RRJP_script)()
-local function XSOM_script() -- SetSkybox_2.LocalScript 
-	local script = Instance.new('LocalScript', SetSkybox_2)
+coroutine.wrap(LHKF_script)()
+local function LZHFTM_script() -- SetFire.LocalScript 
+	local script = Instance.new('LocalScript', SetFire)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	local ReplicatedStorage = game:GetService('ReplicatedStorage')
@@ -243,8 +243,8 @@ local function XSOM_script() -- SetSkybox_2.LocalScript
 		
 	end)
 end
-coroutine.wrap(XSOM_script)()
-local function NPMBMJ_script() -- Frame.LocalScript 
+coroutine.wrap(LZHFTM_script)()
+local function HSSUPO_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local supported = false
@@ -266,8 +266,8 @@ local function NPMBMJ_script() -- Frame.LocalScript
 		end
 	end
 end
-coroutine.wrap(NPMBMJ_script)()
-local function HTGPPW_script() -- CloseOpen.LocalScript 
+coroutine.wrap(HSSUPO_script)()
+local function QNVEGIB_script() -- CloseOpen.LocalScript 
 	local script = Instance.new('LocalScript', CloseOpen)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -286,4 +286,4 @@ local function HTGPPW_script() -- CloseOpen.LocalScript
 	end)
 	
 end
-coroutine.wrap(HTGPPW_script)()
+coroutine.wrap(QNVEGIB_script)()
