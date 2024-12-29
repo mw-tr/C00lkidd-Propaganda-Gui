@@ -1,0 +1,239 @@
+-- Monstrum's Gui to Lua\n-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Page1 = Instance.new("Frame")
+local ServerDestruction = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local SetSkybox = Instance.new("TextButton")
+local DecalSpam = Instance.new("TextButton")
+local AdminRanker = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local CloseOpen = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Frame.BorderSizePixel = 3
+Frame.Position = UDim2.new(0, 3, 0.300000012, 0)
+Frame.Size = UDim2.new(0, 300, 0, 400)
+
+Page1.Name = "Page1"
+Page1.Parent = Frame
+Page1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Page1.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Page1.BorderSizePixel = 3
+Page1.Position = UDim2.new(0, 0, 0, 83)
+Page1.Size = UDim2.new(1, 0, 1, -106)
+
+ServerDestruction.Name = "Server Destruction"
+ServerDestruction.Parent = Page1
+ServerDestruction.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ServerDestruction.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ServerDestruction.BorderSizePixel = 3
+ServerDestruction.Size = UDim2.new(0.5, 0, 1, 0)
+
+TextLabel.Parent = ServerDestruction
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.BorderSizePixel = 3
+TextLabel.Size = UDim2.new(1, 0, 0, 30)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Server Destruction"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+SetSkybox.Name = "Set Skybox"
+SetSkybox.Parent = ServerDestruction
+SetSkybox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SetSkybox.BorderColor3 = Color3.fromRGB(255, 0, 0)
+SetSkybox.BorderSizePixel = 3
+SetSkybox.Position = UDim2.new(0, 0, 0, 33)
+SetSkybox.Size = UDim2.new(0.5, 0, 0, 30)
+SetSkybox.Font = Enum.Font.SourceSans
+SetSkybox.Text = "Set Skybox"
+SetSkybox.TextColor3 = Color3.fromRGB(255, 255, 255)
+SetSkybox.TextSize = 14.000
+
+DecalSpam.Name = "Decal Spam"
+DecalSpam.Parent = ServerDestruction
+DecalSpam.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DecalSpam.BorderColor3 = Color3.fromRGB(255, 0, 0)
+DecalSpam.BorderSizePixel = 3
+DecalSpam.Position = UDim2.new(0, 78, 0, 33)
+DecalSpam.Size = UDim2.new(0.5, 0, 0, 30)
+DecalSpam.Font = Enum.Font.SourceSans
+DecalSpam.Text = "Decal Spam"
+DecalSpam.TextColor3 = Color3.fromRGB(255, 255, 255)
+DecalSpam.TextSize = 14.000
+
+AdminRanker.Name = "Admin Ranker"
+AdminRanker.Parent = Page1
+AdminRanker.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AdminRanker.BorderColor3 = Color3.fromRGB(255, 0, 0)
+AdminRanker.BorderSizePixel = 3
+AdminRanker.Position = UDim2.new(0.5, 3, 0, 0)
+AdminRanker.Size = UDim2.new(0.5, -3, 1, 0)
+
+TextLabel_2.Parent = AdminRanker
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_2.BorderSizePixel = 3
+TextLabel_2.Size = UDim2.new(1, 0, 0, 30)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Admin Ranker"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 14.000
+
+TextButton.Parent = AdminRanker
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.BorderSizePixel = 3
+TextButton.Position = UDim2.new(0, 0, 0, 33)
+TextButton.Size = UDim2.new(0.5, 0, 0, 30)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Soon"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 14.000
+
+TextButton_2.Parent = AdminRanker
+TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_2.BorderSizePixel = 3
+TextButton_2.Position = UDim2.new(0.5, 3, 0, 33)
+TextButton_2.Size = UDim2.new(0.5, -3, 0, 30)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "Soon"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 14.000
+
+TextLabel_3.Parent = Page1
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_3.BorderSizePixel = 3
+TextLabel_3.Position = UDim2.new(0, 0, 1, -29)
+TextLabel_3.Size = UDim2.new(1, 0, 0, 29)
+TextLabel_3.ZIndex = 2
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Page 1"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 29.000
+
+TextLabel_4.Parent = Frame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_4.BorderSizePixel = 3
+TextLabel_4.Size = UDim2.new(1, 0, 0, 40)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "c00lgui Backdoor V0.1 by mwtr"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 24.000
+
+TextButton_3.Name = "<"
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_3.BorderSizePixel = 3
+TextButton_3.Position = UDim2.new(0, 0, 0, 40)
+TextButton_3.Size = UDim2.new(0.5, 0, 0, 40)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "<"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextSize = 48.000
+
+TextButton_4.Name = ">"
+TextButton_4.Parent = Frame
+TextButton_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_4.BorderSizePixel = 3
+TextButton_4.Position = UDim2.new(0.5, 3, 0, 40)
+TextButton_4.Size = UDim2.new(0.5, -3, 0, 40)
+TextButton_4.Font = Enum.Font.SourceSans
+TextButton_4.Text = ">"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextSize = 48.000
+
+CloseOpen.Name = "Close/Open"
+CloseOpen.Parent = ScreenGui
+CloseOpen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CloseOpen.BorderColor3 = Color3.fromRGB(255, 0, 0)
+CloseOpen.BorderSizePixel = 3
+CloseOpen.Position = UDim2.new(0, 3, 0.300000012, 380)
+CloseOpen.Size = UDim2.new(0, 300, 0, 20)
+CloseOpen.Font = Enum.Font.SourceSans
+CloseOpen.Text = "Close"
+CloseOpen.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseOpen.TextSize = 18.000
+
+-- Scripts:
+
+local function RILV_script() -- SetSkybox.LocalScript 
+	local script = Instance.new('LocalScript', SetSkybox)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	local ReplicatedStorage = game:GetService('ReplicatedStorage')
+		local remoteevent = ReplicatedStorage:WaitForChild('CulEvent')
+	--	local txt = script.Parent.Parent.TextLabel
+		
+	if remoteevent then
+			remoteevent:FireServer()
+		else
+			print('Game not supported')
+		end
+		
+	end)
+end
+coroutine.wrap(RILV_script)()
+local function ONKFQOW_script() -- DecalSpam.LocalScript 
+	local script = Instance.new('LocalScript', DecalSpam)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	local ReplicatedStorage = game:GetService('ReplicatedStorage')
+		local remoteevent = ReplicatedStorage:WaitForChild('CulEvent2')
+	--	local txt = script.Parent.Parent.TextLabel
+		
+	if remoteevent then
+			remoteevent:FireServer()
+		else
+			print('Game not supported')
+		end
+		
+	end)
+end
+coroutine.wrap(ONKFQOW_script)()
+local function ZZYFMQU_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local supported = false
+	local ReplicatedStorage = game:GetService('ReplicatedStorage')
+	for _, v in pairs(ReplicatedStorage:GetDescendants()) do
+		if v:IsA('RemoteEvent') and v.Name == 'CulEvent2' or v.Name "CulEvent" then
+			supported = true
+			game:GetService("StarterGui"):SetCore("SendNotification", {
+				Title = "Game is Supported",
+				Text = "Have Fun!",
+				Duration = 5
+			})
+		else
+			game:GetService("StarterGui"):SetCore("SendNotification", {
+				Title = "Game is not Supported",
+				Text = "try a different game :(",
+				Duration = 5
+			})
+		end
+	end
+end
+coroutine.wrap(ZZYFMQU_script)()
