@@ -35,6 +35,11 @@
                                                                                                              
                                                                                                              
 --]]
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
@@ -44,7 +49,8 @@ local TextButton_2 = Instance.new("TextButton")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Parent = game.CoreGui
+ScreenGui.Enabled = false
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
@@ -110,12 +116,12 @@ TextButton_2.TextSize = 25.000
 
 -- Scripts:
 
-local function KBXA_fake_script() -- TextButton.LocalScript 
+local function JADSOMG_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	local ReplicatedStorage = game:GetService('ReplicatedStorage')
-		local remoteevent = ReplicatedStorage:WaitForChild('CulEvent') -- Do Not Change Unless you know what your doing!
+		local remoteevent = ReplicatedStorage:WaitForChild('CulEvent')
 		local txt = script.Parent.Parent.TextLabel
 		
 	if remoteevent then
@@ -126,8 +132,8 @@ local function KBXA_fake_script() -- TextButton.LocalScript
 		
 	end)
 end
-coroutine.wrap(KBXA_fake_script)()
-local function OJYS_fake_script() -- Frame.LocalScript 
+coroutine.wrap(JADSOMG_fake_script)()
+local function MFNFVX_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local ReplicatedStorage = game:GetService('ReplicatedStorage')
@@ -141,13 +147,13 @@ local function OJYS_fake_script() -- Frame.LocalScript
 	end
 	
 end
-coroutine.wrap(OJYS_fake_script)()
-local function VJUNTIZ_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(MFNFVX_fake_script)()
+local function CDDFJW_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	local ReplicatedStorage = game:GetService('ReplicatedStorage')
-		local remoteevent = ReplicatedStorage:WaitForChild('CulEvent2')	 -- Do Not Change Unless you know what your doing!
+		local remoteevent = ReplicatedStorage:WaitForChild('CulEvent2')
 		local txt = script.Parent.Parent.TextLabel
 		
 	if remoteevent then
@@ -158,8 +164,8 @@ local function VJUNTIZ_fake_script() -- TextButton_2.LocalScript
 		
 	end)
 end
-coroutine.wrap(VJUNTIZ_fake_script)()
-local function DJKDVBE_fake_script() -- Frame.UIDrag 
+coroutine.wrap(CDDFJW_fake_script)()
+local function UHFSKJV_fake_script() -- Frame.UIDrag 
 	local script = Instance.new('LocalScript', Frame)
 
 	-- Made by Real_IceyDev (@lceyDex) --
@@ -200,4 +206,5 @@ local function DJKDVBE_fake_script() -- Frame.UIDrag
 		end
 	end)
 end
-coroutine.wrap(DJKDVBE_fake_script)()
+coroutine.wrap(UHFSKJV_fake_script)()
+
