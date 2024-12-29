@@ -180,7 +180,7 @@ CloseOpen.TextSize = 18.000
 
 -- Scripts:
 
-local function XHAJE_script() -- SetSkybox.LocalScript 
+local function CSEWK_script() -- SetSkybox.LocalScript 
 	local script = Instance.new('LocalScript', SetSkybox)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -196,8 +196,8 @@ local function XHAJE_script() -- SetSkybox.LocalScript
 		
 	end)
 end
-coroutine.wrap(XHAJE_script)()
-local function GCLZ_script() -- DecalSpam.LocalScript 
+coroutine.wrap(CSEWK_script)()
+local function ODGSRYW_script() -- DecalSpam.LocalScript 
 	local script = Instance.new('LocalScript', DecalSpam)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -213,8 +213,8 @@ local function GCLZ_script() -- DecalSpam.LocalScript
 		
 	end)
 end
-coroutine.wrap(GCLZ_script)()
-local function DRKLEJ_script() -- Frame.LocalScript 
+coroutine.wrap(ODGSRYW_script)()
+local function JEMVILC_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local supported = false
@@ -236,17 +236,19 @@ local function DRKLEJ_script() -- Frame.LocalScript
 		end
 	end
 end
-coroutine.wrap(DRKLEJ_script)()
-local function XUOIO_script() -- CloseOpen.LocalScript 
-	local script = Instance.new('LocalScript', CloseOpen)
+coroutine.wrap(JEMVILC_script)()
+local function TRBJU_script() -- CloseOpen.Script 
+	local script = Instance.new('Script', CloseOpen)
 
-	local Frame = script.Parent.Parent.Frame
-	if Frame.Visible == true then
-		Frame.Visible = false
-		script.Parent.Text = 'Open'
-	else
-		Frame.Visible = true
-		script.Parent.Text = 'Close'
-	end
+	script.Parent.MouseButton1Click:Connect(function()
+		local Frame = script.Parent.Parent.Frame
+		if Frame.Visible == true then
+			Frame.Visible = false
+			script.Parent.Text = 'Open'
+		else
+			Frame.Visible = true
+			script.Parent.Text = 'Close'
+		end
+	end)
 end
-coroutine.wrap(XUOIO_script)()
+coroutine.wrap(TRBJU_script)()
