@@ -40,11 +40,6 @@
 
 -- Instances:
 
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
@@ -55,7 +50,7 @@ local TextButton_2 = Instance.new("TextButton")
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.Enabled = false
+ScreenGui.Enabled = true
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
@@ -121,7 +116,7 @@ TextButton_2.TextSize = 25.000
 
 -- Scripts:
 
-local function JADSOMG_fake_script() -- TextButton.LocalScript 
+local function EJLLSOA_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -137,8 +132,8 @@ local function JADSOMG_fake_script() -- TextButton.LocalScript
 		
 	end)
 end
-coroutine.wrap(JADSOMG_fake_script)()
-local function MFNFVX_fake_script() -- Frame.LocalScript 
+coroutine.wrap(EJLLSOA_fake_script)()
+local function VHJUQZG_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local ReplicatedStorage = game:GetService('ReplicatedStorage')
@@ -152,8 +147,8 @@ local function MFNFVX_fake_script() -- Frame.LocalScript
 	end
 	
 end
-coroutine.wrap(MFNFVX_fake_script)()
-local function CDDFJW_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(VHJUQZG_fake_script)()
+local function ZOPRS_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -169,8 +164,8 @@ local function CDDFJW_fake_script() -- TextButton_2.LocalScript
 		
 	end)
 end
-coroutine.wrap(CDDFJW_fake_script)()
-local function UHFSKJV_fake_script() -- Frame.UIDrag 
+coroutine.wrap(ZOPRS_fake_script)()
+local function BCRZI_fake_script() -- Frame.UIDrag 
 	local script = Instance.new('LocalScript', Frame)
 
 	-- Made by Real_IceyDev (@lceyDex) --
@@ -211,5 +206,5 @@ local function UHFSKJV_fake_script() -- Frame.UIDrag
 		end
 	end)
 end
-coroutine.wrap(UHFSKJV_fake_script)()
+coroutine.wrap(BCRZI_fake_script)()
 
