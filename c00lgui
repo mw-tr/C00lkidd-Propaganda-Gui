@@ -9,6 +9,7 @@ local ServerDestruction = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local SetSkybox = Instance.new("TextButton")
 local DecalSpam = Instance.new("TextButton")
+local SetSkybox_2 = Instance.new("TextButton")
 local AdminRanker = Instance.new("Frame")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
@@ -79,6 +80,18 @@ DecalSpam.Font = Enum.Font.SourceSans
 DecalSpam.Text = "Decal Spam"
 DecalSpam.TextColor3 = Color3.fromRGB(255, 255, 255)
 DecalSpam.TextSize = 14.000
+
+SetSkybox_2.Name = "Set Skybox"
+SetSkybox_2.Parent = ServerDestruction
+SetSkybox_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SetSkybox_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+SetSkybox_2.BorderSizePixel = 3
+SetSkybox_2.Position = UDim2.new(0, 0, 0, 66)
+SetSkybox_2.Size = UDim2.new(0.5, 0, 0, 30)
+SetSkybox_2.Font = Enum.Font.SourceSans
+SetSkybox_2.Text = "Fire All Parts"
+SetSkybox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SetSkybox_2.TextSize = 14.000
 
 AdminRanker.Name = "Admin Ranker"
 AdminRanker.Parent = Page1
@@ -180,7 +193,7 @@ CloseOpen.TextSize = 18.000
 
 -- Scripts:
 
-local function CSEWK_script() -- SetSkybox.LocalScript 
+local function QADA_script() -- SetSkybox.LocalScript 
 	local script = Instance.new('LocalScript', SetSkybox)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -196,8 +209,8 @@ local function CSEWK_script() -- SetSkybox.LocalScript
 		
 	end)
 end
-coroutine.wrap(CSEWK_script)()
-local function ODGSRYW_script() -- DecalSpam.LocalScript 
+coroutine.wrap(QADA_script)()
+local function RRJP_script() -- DecalSpam.LocalScript 
 	local script = Instance.new('LocalScript', DecalSpam)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -213,8 +226,25 @@ local function ODGSRYW_script() -- DecalSpam.LocalScript
 		
 	end)
 end
-coroutine.wrap(ODGSRYW_script)()
-local function JEMVILC_script() -- Frame.LocalScript 
+coroutine.wrap(RRJP_script)()
+local function XSOM_script() -- SetSkybox_2.LocalScript 
+	local script = Instance.new('LocalScript', SetSkybox_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	local ReplicatedStorage = game:GetService('ReplicatedStorage')
+		local remoteevent = ReplicatedStorage:WaitForChild('CulEvent3')
+	--	local txt = script.Parent.Parent.TextLabel
+		
+	if remoteevent then
+			remoteevent:FireServer()
+		else
+			print('Game not supported')
+		end
+		
+	end)
+end
+coroutine.wrap(XSOM_script)()
+local function NPMBMJ_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local supported = false
@@ -236,19 +266,24 @@ local function JEMVILC_script() -- Frame.LocalScript
 		end
 	end
 end
-coroutine.wrap(JEMVILC_script)()
-local function TRBJU_script() -- CloseOpen.Script 
-	local script = Instance.new('Script', CloseOpen)
+coroutine.wrap(NPMBMJ_script)()
+local function HTGPPW_script() -- CloseOpen.LocalScript 
+	local script = Instance.new('LocalScript', CloseOpen)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		local Frame = script.Parent.Parent.Frame
-		if Frame.Visible == true then
-			Frame.Visible = false
-			script.Parent.Text = 'Open'
+		local Frame = script.Parent.Parent:FindFirstChild("Frame")
+		if Frame then
+			if Frame.Visible then
+				Frame.Visible = false
+				script.Parent.Text = 'Open'
+			else
+				Frame.Visible = true
+				script.Parent.Text = 'Close'
+			end
 		else
-			Frame.Visible = true
-			script.Parent.Text = 'Close'
+			warn("Frame not found!")
 		end
 	end)
+	
 end
-coroutine.wrap(TRBJU_script)()
+coroutine.wrap(HTGPPW_script)()
