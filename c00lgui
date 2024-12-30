@@ -209,7 +209,7 @@ TextLabel_4.BorderColor3 = Color3.fromRGB(255, 0, 0)
 TextLabel_4.BorderSizePixel = 3
 TextLabel_4.Size = UDim2.new(1, 0, 0, 40)
 TextLabel_4.Font = Enum.Font.SourceSans
-TextLabel_4.Text = "c00lgui Backdoor V0.7 by mwtr"
+TextLabel_4.Text = "c00lgui Backdoor V0.5 by mwtr"
 TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.TextSize = 24.000
 
@@ -427,317 +427,106 @@ CloseOpen.Font = Enum.Font.SourceSans
 CloseOpen.Text = "Close"
 CloseOpen.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseOpen.TextSize = 18.000
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextLabel_3 = Instance.new("TextLabel")
-local ImageLabel = Instance.new("ImageLabel")
-
---Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
-Frame.BorderSizePixel = 3
-Frame.Position = UDim2.new(0.002, 0,0.367, 0)
-Frame.Size = UDim2.new(0, 300, 0, 308)
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.173333332, 0, 0.181818187, 0)
-TextLabel.Size = UDim2.new(0, 195, 0, 50)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "c00lgui"
-TextLabel.TextColor3 = Color3.fromRGB(231, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 31.000
-TextLabel.TextWrapped = true
-
-TextLabel_2.Parent = TextLabel
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(-0.00333328242, 0, 0.7754547, 0)
-TextLabel_2.Size = UDim2.new(0, 200, 0, 27)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Reborn By: mwtr"
-TextLabel_2.TextColor3 = Color3.fromRGB(231, 231, 231)
-TextLabel_2.TextSize = 23.000
-
-TextLabel_3.Parent = TextLabel_2
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(-0.0666666403, 0, 0.97570914, 0)
-TextLabel_3.Size = UDim2.new(0, 225, 0, 49)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "Shoutout to lalol hub, SySPro(Now SxSPro) and v3rm"
-TextLabel_3.TextColor3 = Color3.fromRGB(231, 231, 231)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 23.000
-TextLabel_3.TextWrapped = true
-
-ImageLabel.Parent = Frame
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.336666673, 0, 0.551948071, 0)
-ImageLabel.Size = UDim2.new(0, 100, 0, 100)
-ImageLabel.Image = "rbxassetid://84535075170702"
 
 -- Scripts:
 
-local function DYYPN_fake_script() -- TextLabel.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel)
-
-	
-	
-	
-	
-	-- Variables
-	local TweenService = game:GetService("TweenService") -- TweenService
-	local textLabel = script.Parent -- Assuming this script is inside the TextLabel
-	
-	-- Initial position: off-screen to the right
-	textLabel.Position = UDim2.new(-0.2, -151,0.182, 0)  -- This places the TextLabel off-screen to the right
-	
-	-- Define the final position
-	local finalPosition = UDim2.new(0, 55,0, 50)  -- This is the final position on the screen
-	
-	-- Tween Info (Duration, EasingStyle, EasingDirection, Repeat Count, Reverses)
-	local tweenInfo = TweenInfo.new(
-		0.5,  -- Duration (2 seconds for the movement)
-		Enum.EasingStyle.Sine,  -- Easing style (Linear for a smooth constant speed)
-		Enum.EasingDirection.InOut,  -- Easing direction (smooth in and out)
-		0,  -- No repeat
-		false  -- No reversing
-	)
-	
-	-- Create the Tween
-	local tweenGoal = { Position = finalPosition }
-	local tween = TweenService:Create(textLabel, tweenInfo, tweenGoal)
-	
-	-- Function to reverse the tween after a delay
-	local function reverseTween()
-		-- Wait 1 second before reversing the tween
-		wait(1)
-	
-		-- Reverse the tween by creating a new tween from final position back to the start position
-		local reverseTween = TweenService:Create(textLabel, tweenInfo, { Position = UDim2.new(-0.2, -151,0.182, 0) })
-		reverseTween:Play()  -- Play the reverse tween
-	end
-	
-	-- Play the initial tween
-	tween:Play()
-	
-	-- When the initial tween completes, reverse the tween after 1 second
-	tween.Completed:Connect(function()
-		reverseTween()
-	end)
-	
-end
-coroutine.wrap(DYYPN_fake_script)()
-local function VOCOY_fake_script() -- ImageLabel.LocalScript 
-	local script = Instance.new('LocalScript', ImageLabel)
-
-	
-	
-	
-	
-	
-	
-	-- Variables
-	local TweenService = game:GetService("TweenService") -- TweenService
-	local ImageLabel = script.Parent -- Assuming this script is inside the TextLabel
-	
-	-- Initial position: off-screen to the right
-	ImageLabel.Position = UDim2.new(-0.16, -60,0.525, 0)  -- This places the TextLabel off-screen to the right
-	
-	-- Define the final position
-	local finalPosition = UDim2.new(0.337, 0,0.552, 0)  -- This is the final position on the screen
-	
-	-- Tween Info (Duration, EasingStyle, EasingDirection, Repeat Count, Reverses)
-	local tweenInfo = TweenInfo.new(
-		1,  -- Duration (2 seconds for the movement)
-		Enum.EasingStyle.Circular,  -- Easing style (Linear for a smooth constant speed)
-		Enum.EasingDirection.InOut,  -- Easing direction (smooth in and out)
-		0,  -- No repeat
-		false  -- No reversing
-	)
-	
-	-- Create the Tween
-	local tweenGoal = { Position = finalPosition }
-	local tween = TweenService:Create(ImageLabel, tweenInfo, tweenGoal)
-	
-	-- Function to reverse the tween after a delay
-	local function reverseTween()
-		-- Wait 1 second before reversing the tween
-		wait(1)
-	
-		-- Reverse the tween by creating a new tween from final position back to the start position
-		local reverseTween = TweenService:Create(ImageLabel, tweenInfo, { Position = UDim2.new(-0.16, -60,0.525, 0) })
-		reverseTween:Play()  -- Play the reverse tween
-	end
-	
-	-- Play the initial tween
-	tween:Play()
-	
-	-- When the initial tween completes, reverse the tween after 1 second
-	tween.Completed:Connect(function()
-		reverseTween()
-	end)
-	
-	
-	
-	
-end
-coroutine.wrap(VOCOY_fake_script)()
-local function VPOZ_fake_script() -- Frame.LocalScript 
-	local script = Instance.new('LocalScript', Frame)
-
-	local TweenService = game:GetService("TweenService")
-	local frameFade = script.Parent -- Assuming this script is a child of the frame you want to fade
-	
-	-- Set the initial properties (this step is optional)
-	frameFade.BackgroundTransparency = 0 -- Fully opaque
-	
-	-- Create the TweenInfo for the fade effect (1.5 seconds duration)
-	local tweenInfo = TweenInfo.new(
-		1.5, -- Duration of the fade
-		Enum.EasingStyle.Quad, -- Easing style (smooth transition)
-		Enum.EasingDirection.Out, -- Easing direction (fade out)
-		0, -- Repeat count (0 means it won't repeat)
-		false, -- Reverses the tween (set to false for one way)
-		0 -- Delay time (0 means no delay)
-	)
-	
-	-- Define the properties we want to change (BackgroundTransparency to 1)
-	local goal = { BackgroundTransparency = 1 }
-	
-	-- Create the tween
-	local tween = TweenService:Create(frameFade, tweenInfo, goal)
-	
-	-- Play the tween after 1.5 seconds
-	wait(1.9)
-	tween:Play()
-	wait(1)
-	frameFade:Destroy()
-end
-coroutine.wrap(VPOZ_fake_script)()
--- Scripts:
-
-local function AFWS_fake_script() -- SetSkybox.LocalScript 
+local function CAYC_fake_script() -- SetSkybox.LocalScript 
 	local script = Instance.new('LocalScript', SetSkybox)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	local ReplicatedStorage = game:GetService('ReplicatedStorage')
-		local remoteevent = ReplicatedStorage:WaitForChild('CulEvent')
+		local remoteevent = ReplicatedStorage:WaitForChild('UniversalEvent')
 	--	local txt = script.Parent.Parent.TextLabel
 		
 	if remoteevent then
-			remoteevent:FireServer()
+			remoteevent:FireServer("culEvent")
 		else
 			print('Game not supported')
 		end
 		
 	end)
 end
-coroutine.wrap(AFWS_fake_script)()
-local function KZOA_fake_script() -- DecalSpam.LocalScript 
+coroutine.wrap(CAYC_fake_script)()
+local function NKUDTB_fake_script() -- DecalSpam.LocalScript 
 	local script = Instance.new('LocalScript', DecalSpam)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	local ReplicatedStorage = game:GetService('ReplicatedStorage')
-		local remoteevent = ReplicatedStorage:WaitForChild('CulEvent2')
+		local remoteevent = ReplicatedStorage:WaitForChild('UniversalEvent')
 	--	local txt = script.Parent.Parent.TextLabel
 		
 	if remoteevent then
-			remoteevent:FireServer()
+			remoteevent:FireServer('culEvent2')
 		else
 			print('Game not supported')
 		end
 		
 	end)
 end
-coroutine.wrap(KZOA_fake_script)()
-local function ZNZRC_fake_script() -- SetFire.LocalScript 
+coroutine.wrap(NKUDTB_fake_script)()
+local function ODKZH_fake_script() -- SetFire.LocalScript 
 	local script = Instance.new('LocalScript', SetFire)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	local ReplicatedStorage = game:GetService('ReplicatedStorage')
-		local remoteevent = ReplicatedStorage:WaitForChild('CulEvent3')
+		local remoteevent = ReplicatedStorage:WaitForChild('UniversalEvent')
 	--	local txt = script.Parent.Parent.TextLabel
 		
 	if remoteevent then
-			remoteevent:FireServer()
+			remoteevent:FireServer('culEvent3')
 		else
 			print('Game not supported')
 		end
 		
 	end)
 end
-coroutine.wrap(ZNZRC_fake_script)()
-local function FEXXC_fake_script() -- Hint.LocalScript 
+coroutine.wrap(ODKZH_fake_script)()
+local function PPID_fake_script() -- Hint.LocalScript 
 	local script = Instance.new('LocalScript', Hint)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	local ReplicatedStorage = game:GetService('ReplicatedStorage')
-		local remoteevent4 = ReplicatedStorage:WaitForChild('CulEvent4')
+		local remoteevent4 = ReplicatedStorage:WaitForChild('UniversalEvent')
 	--	local txt = script.Parent.Parent.TextLabel
 		
 	if remoteevent4 then
-			remoteevent4:FireServer()
+			remoteevent4:FireServer('culEvent4')
 		else
 			print('Game not supported')
 		end
 		
 	end)
 end
-coroutine.wrap(FEXXC_fake_script)()
-local function VYIQOR_fake_script() -- Disco.LocalScript 
+coroutine.wrap(PPID_fake_script)()
+local function XZGAO_fake_script() -- Disco.LocalScript 
 	local script = Instance.new('LocalScript', Disco)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	local ReplicatedStorage = game:GetService('ReplicatedStorage')
-		local remoteevent5 = ReplicatedStorage:WaitForChild('culEvent5')
+		local remoteevent5 = ReplicatedStorage:WaitForChild('UniversalEvent')
 	--	local txt = script.Parent.Parent.TextLabel
 		
 	if remoteevent5 then
-			remoteevent5:FireServer()
+			remoteevent5:FireServer('culEvent5')
 		else
 			print('Game not supported')
 		end
 		
 	end)
 end
-coroutine.wrap(VYIQOR_fake_script)()
-local function DRGHF_fake_script() -- RainingTacos.LocalScript 
+coroutine.wrap(XZGAO_fake_script)()
+local function CCXXC_fake_script() -- RainingTacos.LocalScript 
 	local script = Instance.new('LocalScript', RainingTacos)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	local ReplicatedStorage = game:GetService('ReplicatedStorage')
-		local remoteevent6 = ReplicatedStorage:WaitForChild('CulEvent6')
+		local remoteevent6 = ReplicatedStorage:WaitForChild('UniversalEvent')
 	--	local txt = script.Parent.Parent.TextLabel
 		
 	if remoteevent6 then
 		while true do
 			task.wait(0.01)
-				remoteevent6:FireServer()
+				remoteevent6:FireServer('culEvent6')
 	
 		end
 		else
@@ -746,8 +535,8 @@ local function DRGHF_fake_script() -- RainingTacos.LocalScript
 		
 	end)
 end
-coroutine.wrap(DRGHF_fake_script)()
-local function CIWHEH_fake_script() -- Frame.LocalScript 
+coroutine.wrap(CCXXC_fake_script)()
+local function IZPITCF_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local supported = false
@@ -755,7 +544,7 @@ local function CIWHEH_fake_script() -- Frame.LocalScript
 	
 	-- Loop through the descendants in ReplicatedStorage to check for the relevant RemoteEvents
 	for _, v in pairs(ReplicatedStorage:GetDescendants()) do
-		if v:IsA('RemoteEvent') and (v.Name == 'CulEvent' or v.Name == 'CulEvent2') then
+		if v:IsA('RemoteEvent') and v.Name == 'UniversalEvent'then
 			supported = true
 			break  -- No need to continue the loop if we found one of the events
 		end
@@ -777,8 +566,8 @@ local function CIWHEH_fake_script() -- Frame.LocalScript
 	end
 	
 end
-coroutine.wrap(CIWHEH_fake_script)()
-local function GRZP_fake_script() -- CloseOpen.LocalScript 
+coroutine.wrap(IZPITCF_fake_script)()
+local function EYCT_fake_script() -- CloseOpen.LocalScript 
 	local script = Instance.new('LocalScript', CloseOpen)
 
 	-- Instances and Properties Setup (unchanged, as shown in your original code)
@@ -806,4 +595,4 @@ local function GRZP_fake_script() -- CloseOpen.LocalScript
 	-- Add functionality for SetSkybox, DecalSpam, SetFire, etc.
 	
 end
-coroutine.wrap(GRZP_fake_script)()
+coroutine.wrap(EYCT_fake_script)()
