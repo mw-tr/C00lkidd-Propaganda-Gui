@@ -629,22 +629,30 @@ coroutine.wrap(VPOZ_fake_script)()
 -- Scripts:
 local supported = false
 local ReplicatedStorage = game:GetService('ReplicatedStorage')
+
+-- Loop through the descendants in ReplicatedStorage to check for the relevant RemoteEvents
 for _, v in pairs(ReplicatedStorage:GetDescendants()) do
-	if v:IsA('RemoteEvent') and v.Name == 'CulEvent2' or v.Name == "CulEvent" then
-		supported = true
-		game:GetService("StarterGui"):SetCore("SendNotification", {
-			Title = "Game is Supported",
-			Text = "Have Fun!",
-			Duration = 5
-		})
-	else
-		game:GetService("StarterGui"):SetCore("SendNotification", {
-			Title = "Game is not Supported",
-			Text = "try a different game :(",
-			Duration = 5
-		})
-	end
+    if v:IsA('RemoteEvent') and (v.Name == 'CulEvent' or v.Name == 'CulEvent2') then
+        supported = true
+        break  -- No need to continue the loop if we found one of the events
+    end
 end
+
+-- Send the appropriate notification based on whether a supported event was found
+if supported then
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Game is Supported",
+        Text = "Have Fun!",
+        Duration = 5
+    })
+else
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Game is not Supported",
+        Text = "Try a different game :(",
+        Duration = 5
+    })
+end
+
 
 
 local function KZMKQK_fake_script() -- SetSkybox.LocalScript 
