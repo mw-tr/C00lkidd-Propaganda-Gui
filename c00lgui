@@ -12,6 +12,7 @@ local SetSkybox = Instance.new("TextButton")
 local DecalSpam = Instance.new("TextButton")
 local SetFire = Instance.new("TextButton")
 local Hint = Instance.new("TextButton")
+local Disco = Instance.new("TextButton")
 local AdminRanker = Instance.new("Frame")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
@@ -23,19 +24,17 @@ local TextButton_4 = Instance.new("TextButton")
 local Settings = Instance.new("Frame")
 local TextLabel_5 = Instance.new("TextLabel")
 local Page1_2 = Instance.new("Frame")
-local HintEditor = Instance.new("Frame")
+local TextLabel_6 = Instance.new("TextLabel")
+local SoundId_Editor = Instance.new("Frame")
 local title = Instance.new("TextLabel")
 local TextBox = Instance.new("TextBox")
-local TextLabel_6 = Instance.new("TextLabel")
-local HintEditor_2 = Instance.new("Frame")
+local Kill_User = Instance.new("Frame")
 local title_2 = Instance.new("TextLabel")
 local TextBox_2 = Instance.new("TextBox")
-local HintEditor_3 = Instance.new("Frame")
+local Bring_User = Instance.new("Frame")
 local title_3 = Instance.new("TextLabel")
 local TextBox_3 = Instance.new("TextBox")
-local HintEditor_4 = Instance.new("Frame")
-local title_4 = Instance.new("TextLabel")
-local TextBox_4 = Instance.new("TextBox")
+local TextLabel_7 = Instance.new("TextLabel")
 local TextButton_5 = Instance.new("TextButton")
 local TextButton_6 = Instance.new("TextButton")
 local CloseOpen = Instance.new("TextButton")
@@ -125,6 +124,18 @@ Hint.Text = "Hint"
 Hint.TextColor3 = Color3.fromRGB(255, 255, 255)
 Hint.TextSize = 14.000
 
+Disco.Name = "Disco"
+Disco.Parent = ServerDestruction
+Disco.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Disco.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Disco.BorderSizePixel = 3
+Disco.Position = UDim2.new(0, 0, 0, 100)
+Disco.Size = UDim2.new(0.5, 0, 0, 30)
+Disco.Font = Enum.Font.SourceSans
+Disco.Text = "Disco"
+Disco.TextColor3 = Color3.fromRGB(255, 255, 255)
+Disco.TextSize = 14.000
+
 AdminRanker.Name = "Admin Ranker"
 AdminRanker.Parent = Page1
 AdminRanker.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -139,7 +150,7 @@ TextLabel_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
 TextLabel_2.BorderSizePixel = 3
 TextLabel_2.Size = UDim2.new(1, 0, 0, 30)
 TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Admin Ranker"
+TextLabel_2.Text = "c00l admin panel"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 14.000
 
@@ -183,7 +194,7 @@ TextLabel_4.BorderColor3 = Color3.fromRGB(255, 0, 0)
 TextLabel_4.BorderSizePixel = 3
 TextLabel_4.Size = UDim2.new(1, 0, 0, 40)
 TextLabel_4.Font = Enum.Font.SourceSans
-TextLabel_4.Text = "c00lgui Backdoor V0.3 by mwtr"
+TextLabel_4.Text = "c00lgui Backdoor V0.5 by mwtr"
 TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.TextSize = 24.000
 
@@ -238,40 +249,6 @@ Page1_2.BorderSizePixel = 0
 Page1_2.Position = UDim2.new(0, 0, 0, 41)
 Page1_2.Size = UDim2.new(1, 0, 1, -83)
 
-HintEditor.Name = "Hint Editor"
-HintEditor.Parent = Page1_2
-HintEditor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-HintEditor.BackgroundTransparency = 1.000
-HintEditor.BorderColor3 = Color3.fromRGB(0, 0, 0)
-HintEditor.BorderSizePixel = 0
-HintEditor.Position = UDim2.new(0, 0, 0, 42)
-HintEditor.Size = UDim2.new(1, 0, -0.10410095, 66)
-
-title.Name = "title"
-title.Parent = HintEditor
-title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-title.BorderColor3 = Color3.fromRGB(255, 0, 0)
-title.BorderSizePixel = 3
-title.Position = UDim2.new(0, 0, 0, -1)
-title.Size = UDim2.new(0.5, 0, 0.0909090936, 30)
-title.Font = Enum.Font.SourceSans
-title.Text = "Hint Txt"
-title.TextColor3 = Color3.fromRGB(255, 255, 255)
-title.TextSize = 20.000
-
-TextBox.Parent = HintEditor
-TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.BorderColor3 = Color3.fromRGB(255, 0, 0)
-TextBox.BorderSizePixel = 3
-TextBox.Position = UDim2.new(0.50999999, 0, -0.0151515156, -1)
-TextBox.Size = UDim2.new(0, 147, 0, 33)
-TextBox.Font = Enum.Font.SourceSans
-TextBox.PlaceholderText = "Hint Here 'Team C00lkidd 4 Join today!'"
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.TextSize = 14.000
-TextBox.TextWrapped = true
-
 TextLabel_6.Parent = Page1_2
 TextLabel_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_6.BorderColor3 = Color3.fromRGB(255, 0, 0)
@@ -284,28 +261,62 @@ TextLabel_6.Text = "Page 1"
 TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_6.TextSize = 29.000
 
-HintEditor_2.Name = "Hint Editor"
-HintEditor_2.Parent = Page1_2
-HintEditor_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-HintEditor_2.BackgroundTransparency = 1.000
-HintEditor_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-HintEditor_2.BorderSizePixel = 0
-HintEditor_2.Position = UDim2.new(0, 0, 0, 77)
-HintEditor_2.Size = UDim2.new(1, 0, -0.10410095, 66)
+SoundId_Editor.Name = "SoundId_Editor"
+SoundId_Editor.Parent = Page1_2
+SoundId_Editor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SoundId_Editor.BackgroundTransparency = 1.000
+SoundId_Editor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SoundId_Editor.BorderSizePixel = 0
+SoundId_Editor.Position = UDim2.new(0, 0, 0, 43)
+SoundId_Editor.Size = UDim2.new(1, 0, -0.10410095, 66)
+
+title.Name = "title"
+title.Parent = SoundId_Editor
+title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+title.BorderColor3 = Color3.fromRGB(255, 0, 0)
+title.BorderSizePixel = 3
+title.Position = UDim2.new(0, 0, 0, -1)
+title.Size = UDim2.new(0.5, 0, 0.0909090936, 30)
+title.Font = Enum.Font.SourceSans
+title.Text = "SoundID"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextSize = 20.000
+
+TextBox.Parent = SoundId_Editor
+TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextBox.BorderSizePixel = 3
+TextBox.Position = UDim2.new(0.50999999, 0, -0.0151515156, -1)
+TextBox.Size = UDim2.new(0, 147, 0, 33)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "Hint Here 'Team C00lkidd 4 Join today!'"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+Kill_User.Name = "Kill_User"
+Kill_User.Parent = Page1_2
+Kill_User.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Kill_User.BackgroundTransparency = 1.000
+Kill_User.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Kill_User.BorderSizePixel = 0
+Kill_User.Position = UDim2.new(0, 0, 0, 79)
+Kill_User.Size = UDim2.new(1, 0, -0.10410095, 66)
 
 title_2.Name = "title"
-title_2.Parent = HintEditor_2
+title_2.Parent = Kill_User
 title_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 title_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
 title_2.BorderSizePixel = 3
 title_2.Position = UDim2.new(0, 0, 0, -1)
 title_2.Size = UDim2.new(0.5, 0, 0.0909090936, 30)
 title_2.Font = Enum.Font.SourceSans
-title_2.Text = "Hint Txt"
+title_2.Text = "Kill"
 title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 title_2.TextSize = 20.000
 
-TextBox_2.Parent = HintEditor_2
+TextBox_2.Parent = Kill_User
 TextBox_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextBox_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
 TextBox_2.BorderSizePixel = 3
@@ -318,28 +329,28 @@ TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox_2.TextSize = 14.000
 TextBox_2.TextWrapped = true
 
-HintEditor_3.Name = "Hint Editor"
-HintEditor_3.Parent = Page1_2
-HintEditor_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-HintEditor_3.BackgroundTransparency = 1.000
-HintEditor_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-HintEditor_3.BorderSizePixel = 0
-HintEditor_3.Position = UDim2.new(0, 0, 0, 113)
-HintEditor_3.Size = UDim2.new(1, 0, -0.10410095, 66)
+Bring_User.Name = "Bring_User"
+Bring_User.Parent = Page1_2
+Bring_User.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Bring_User.BackgroundTransparency = 1.000
+Bring_User.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bring_User.BorderSizePixel = 0
+Bring_User.Position = UDim2.new(0, 0, 0, 115)
+Bring_User.Size = UDim2.new(1, 0, -0.10410095, 66)
 
 title_3.Name = "title"
-title_3.Parent = HintEditor_3
+title_3.Parent = Bring_User
 title_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 title_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
 title_3.BorderSizePixel = 3
 title_3.Position = UDim2.new(0, 0, 0, -1)
 title_3.Size = UDim2.new(0.5, 0, 0.0909090936, 30)
 title_3.Font = Enum.Font.SourceSans
-title_3.Text = "Hint Txt"
+title_3.Text = "Bring"
 title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 title_3.TextSize = 20.000
 
-TextBox_3.Parent = HintEditor_3
+TextBox_3.Parent = Bring_User
 TextBox_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextBox_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
 TextBox_3.BorderSizePixel = 3
@@ -352,39 +363,19 @@ TextBox_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox_3.TextSize = 14.000
 TextBox_3.TextWrapped = true
 
-HintEditor_4.Name = "Hint Editor"
-HintEditor_4.Parent = Page1_2
-HintEditor_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-HintEditor_4.BackgroundTransparency = 1.000
-HintEditor_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-HintEditor_4.BorderSizePixel = 0
-HintEditor_4.Position = UDim2.new(0, 0, 0, 149)
-HintEditor_4.Size = UDim2.new(1, 0, -0.10410095, 66)
-
-title_4.Name = "title"
-title_4.Parent = HintEditor_4
-title_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-title_4.BorderColor3 = Color3.fromRGB(255, 0, 0)
-title_4.BorderSizePixel = 3
-title_4.Position = UDim2.new(0, 0, 0, -1)
-title_4.Size = UDim2.new(0.5, 0, 0.0909090936, 30)
-title_4.Font = Enum.Font.SourceSans
-title_4.Text = "Hint Txt"
-title_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-title_4.TextSize = 20.000
-
-TextBox_4.Parent = HintEditor_4
-TextBox_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextBox_4.BorderColor3 = Color3.fromRGB(255, 0, 0)
-TextBox_4.BorderSizePixel = 3
-TextBox_4.Position = UDim2.new(0.50999999, 0, -0.0151515156, -1)
-TextBox_4.Size = UDim2.new(0, 147, 0, 33)
-TextBox_4.Font = Enum.Font.SourceSans
-TextBox_4.PlaceholderText = "Hint Here 'Team C00lkidd 4 Join today!'"
-TextBox_4.Text = ""
-TextBox_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox_4.TextSize = 14.000
-TextBox_4.TextWrapped = true
+TextLabel_7.Parent = Page1_2
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_7.BorderSizePixel = 3
+TextLabel_7.Position = UDim2.new(0, 0, 1.16088331, -29)
+TextLabel_7.Size = UDim2.new(1, 0, -0.0283911731, 29)
+TextLabel_7.ZIndex = 2
+TextLabel_7.Font = Enum.Font.SourceSans
+TextLabel_7.Text = "Version: 0.1 | Still be worked on"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 29.000
+TextLabel_7.TextWrapped = true
 
 TextButton_5.Name = ">"
 TextButton_5.Parent = Settings
@@ -421,221 +412,10 @@ CloseOpen.Font = Enum.Font.SourceSans
 CloseOpen.Text = "Close"
 CloseOpen.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseOpen.TextSize = 18.000
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextLabel_3 = Instance.new("TextLabel")
-local ImageLabel = Instance.new("ImageLabel")
-
---Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
-Frame.BorderSizePixel = 3
-Frame.Position = UDim2.new(0.002, 0,0.367, 0)
-Frame.Size = UDim2.new(0, 300, 0, 308)
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.173333332, 0, 0.181818187, 0)
-TextLabel.Size = UDim2.new(0, 195, 0, 50)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "c00lgui"
-TextLabel.TextColor3 = Color3.fromRGB(231, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 31.000
-TextLabel.TextWrapped = true
-
-TextLabel_2.Parent = TextLabel
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(-0.00333328242, 0, 0.7754547, 0)
-TextLabel_2.Size = UDim2.new(0, 200, 0, 27)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Reborn By: mwtr"
-TextLabel_2.TextColor3 = Color3.fromRGB(231, 231, 231)
-TextLabel_2.TextSize = 23.000
-
-TextLabel_3.Parent = TextLabel_2
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(-0.0666666403, 0, 0.97570914, 0)
-TextLabel_3.Size = UDim2.new(0, 225, 0, 49)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "Shoutout to lalol hub, SySPro(Now SxSPro) and v3rm"
-TextLabel_3.TextColor3 = Color3.fromRGB(231, 231, 231)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 23.000
-TextLabel_3.TextWrapped = true
-
-ImageLabel.Parent = Frame
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.336666673, 0, 0.551948071, 0)
-ImageLabel.Size = UDim2.new(0, 100, 0, 100)
-ImageLabel.Image = "rbxassetid://84535075170702"
 
 -- Scripts:
 
-local function DYYPN_fake_script() -- TextLabel.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel)
-
-	
-	
-	
-	
-	-- Variables
-	local TweenService = game:GetService("TweenService") -- TweenService
-	local textLabel = script.Parent -- Assuming this script is inside the TextLabel
-	
-	-- Initial position: off-screen to the right
-	textLabel.Position = UDim2.new(-0.2, -151,0.182, 0)  -- This places the TextLabel off-screen to the right
-	
-	-- Define the final position
-	local finalPosition = UDim2.new(0, 55,0, 50)  -- This is the final position on the screen
-	
-	-- Tween Info (Duration, EasingStyle, EasingDirection, Repeat Count, Reverses)
-	local tweenInfo = TweenInfo.new(
-		0.5,  -- Duration (2 seconds for the movement)
-		Enum.EasingStyle.Sine,  -- Easing style (Linear for a smooth constant speed)
-		Enum.EasingDirection.InOut,  -- Easing direction (smooth in and out)
-		0,  -- No repeat
-		false  -- No reversing
-	)
-	
-	-- Create the Tween
-	local tweenGoal = { Position = finalPosition }
-	local tween = TweenService:Create(textLabel, tweenInfo, tweenGoal)
-	
-	-- Function to reverse the tween after a delay
-	local function reverseTween()
-		-- Wait 1 second before reversing the tween
-		wait(1)
-	
-		-- Reverse the tween by creating a new tween from final position back to the start position
-		local reverseTween = TweenService:Create(textLabel, tweenInfo, { Position = UDim2.new(-0.2, -151,0.182, 0) })
-		reverseTween:Play()  -- Play the reverse tween
-	end
-	
-	-- Play the initial tween
-	tween:Play()
-	
-	-- When the initial tween completes, reverse the tween after 1 second
-	tween.Completed:Connect(function()
-		reverseTween()
-	end)
-	
-end
-coroutine.wrap(DYYPN_fake_script)()
-local function VOCOY_fake_script() -- ImageLabel.LocalScript 
-	local script = Instance.new('LocalScript', ImageLabel)
-
-	
-	
-	
-	
-	
-	
-	-- Variables
-	local TweenService = game:GetService("TweenService") -- TweenService
-	local ImageLabel = script.Parent -- Assuming this script is inside the TextLabel
-	
-	-- Initial position: off-screen to the right
-	ImageLabel.Position = UDim2.new(-0.16, -60,0.525, 0)  -- This places the TextLabel off-screen to the right
-	
-	-- Define the final position
-	local finalPosition = UDim2.new(0.337, 0,0.552, 0)  -- This is the final position on the screen
-	
-	-- Tween Info (Duration, EasingStyle, EasingDirection, Repeat Count, Reverses)
-	local tweenInfo = TweenInfo.new(
-		1,  -- Duration (2 seconds for the movement)
-		Enum.EasingStyle.Circular,  -- Easing style (Linear for a smooth constant speed)
-		Enum.EasingDirection.InOut,  -- Easing direction (smooth in and out)
-		0,  -- No repeat
-		false  -- No reversing
-	)
-	
-	-- Create the Tween
-	local tweenGoal = { Position = finalPosition }
-	local tween = TweenService:Create(ImageLabel, tweenInfo, tweenGoal)
-	
-	-- Function to reverse the tween after a delay
-	local function reverseTween()
-		-- Wait 1 second before reversing the tween
-		wait(1)
-	
-		-- Reverse the tween by creating a new tween from final position back to the start position
-		local reverseTween = TweenService:Create(ImageLabel, tweenInfo, { Position = UDim2.new(-0.16, -60,0.525, 0) })
-		reverseTween:Play()  -- Play the reverse tween
-	end
-	
-	-- Play the initial tween
-	tween:Play()
-	
-	-- When the initial tween completes, reverse the tween after 1 second
-	tween.Completed:Connect(function()
-		reverseTween()
-	end)
-	
-	
-	
-	
-end
-coroutine.wrap(VOCOY_fake_script)()
-local function VPOZ_fake_script() -- Frame.LocalScript 
-	local script = Instance.new('LocalScript', Frame)
-
-	local TweenService = game:GetService("TweenService")
-	local frameFade = script.Parent -- Assuming this script is a child of the frame you want to fade
-	
-	-- Set the initial properties (this step is optional)
-	frameFade.BackgroundTransparency = 0 -- Fully opaque
-	
-	-- Create the TweenInfo for the fade effect (1.5 seconds duration)
-	local tweenInfo = TweenInfo.new(
-		1.5, -- Duration of the fade
-		Enum.EasingStyle.Quad, -- Easing style (smooth transition)
-		Enum.EasingDirection.Out, -- Easing direction (fade out)
-		0, -- Repeat count (0 means it won't repeat)
-		false, -- Reverses the tween (set to false for one way)
-		0 -- Delay time (0 means no delay)
-	)
-	
-	-- Define the properties we want to change (BackgroundTransparency to 1)
-	local goal = { BackgroundTransparency = 1 }
-	
-	-- Create the tween
-	local tween = TweenService:Create(frameFade, tweenInfo, goal)
-	
-	-- Play the tween after 1.5 seconds
-	wait(1.9)
-	tween:Play()
-	wait(1)
-	frameFade:Destroy()
-end
-coroutine.wrap(VPOZ_fake_script)()
--- Scripts:
-
-local function KFZL_fake_script() -- SetSkybox.LocalScript 
+local function XCLDB_fake_script() -- SetSkybox.LocalScript 
 	local script = Instance.new('LocalScript', SetSkybox)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -651,8 +431,8 @@ local function KFZL_fake_script() -- SetSkybox.LocalScript
 		
 	end)
 end
-coroutine.wrap(KFZL_fake_script)()
-local function IPRJHJY_fake_script() -- DecalSpam.LocalScript 
+coroutine.wrap(XCLDB_fake_script)()
+local function YFUXZZ_fake_script() -- DecalSpam.LocalScript 
 	local script = Instance.new('LocalScript', DecalSpam)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -668,8 +448,8 @@ local function IPRJHJY_fake_script() -- DecalSpam.LocalScript
 		
 	end)
 end
-coroutine.wrap(IPRJHJY_fake_script)()
-local function FXFCBY_fake_script() -- SetFire.LocalScript 
+coroutine.wrap(YFUXZZ_fake_script)()
+local function EGRRAO_fake_script() -- SetFire.LocalScript 
 	local script = Instance.new('LocalScript', SetFire)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -685,8 +465,8 @@ local function FXFCBY_fake_script() -- SetFire.LocalScript
 		
 	end)
 end
-coroutine.wrap(FXFCBY_fake_script)()
-local function BDJWAO_fake_script() -- Hint.LocalScript 
+coroutine.wrap(EGRRAO_fake_script)()
+local function YARVAS_fake_script() -- Hint.LocalScript 
 	local script = Instance.new('LocalScript', Hint)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -702,8 +482,25 @@ local function BDJWAO_fake_script() -- Hint.LocalScript
 		
 	end)
 end
-coroutine.wrap(BDJWAO_fake_script)()
-local function JRIMC_fake_script() -- Frame.LocalScript 
+coroutine.wrap(YARVAS_fake_script)()
+local function BVAAWM_fake_script() -- Disco.LocalScript 
+	local script = Instance.new('LocalScript', Disco)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	local ReplicatedStorage = game:GetService('ReplicatedStorage')
+		local remoteevent5 = ReplicatedStorage:WaitForChild('culEvent5')
+	--	local txt = script.Parent.Parent.TextLabel
+		
+	if remoteevent5 then
+			remoteevent5:FireServer()
+		else
+			print('Game not supported')
+		end
+		
+	end)
+end
+coroutine.wrap(BVAAWM_fake_script)()
+local function FOHRHJ_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local supported = false
@@ -725,8 +522,8 @@ local function JRIMC_fake_script() -- Frame.LocalScript
 		end
 	end
 end
-coroutine.wrap(JRIMC_fake_script)()
-local function GIUKNYB_fake_script() -- CloseOpen.LocalScript 
+coroutine.wrap(FOHRHJ_fake_script)()
+local function HQSXF_fake_script() -- CloseOpen.LocalScript 
 	local script = Instance.new('LocalScript', CloseOpen)
 
 	-- Instances and Properties Setup (unchanged, as shown in your original code)
@@ -754,4 +551,4 @@ local function GIUKNYB_fake_script() -- CloseOpen.LocalScript
 	-- Add functionality for SetSkybox, DecalSpam, SetFire, etc.
 	
 end
-coroutine.wrap(GIUKNYB_fake_script)()
+coroutine.wrap(HQSXF_fake_script)()
