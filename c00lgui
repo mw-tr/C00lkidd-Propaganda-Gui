@@ -630,7 +630,7 @@ coroutine.wrap(VPOZ_fake_script)()
 local supported = false
 local ReplicatedStorage = game:GetService('ReplicatedStorage')
 for _, v in pairs(ReplicatedStorage:GetDescendants()) do
-	if v:IsA('RemoteEvent') and v.Name == 'CulEvent2' or v.Name == "CulEvent" or v.Name == 'CulEvent3' then
+	if v:IsA('RemoteEvent') and v.Name == 'CulEvent2' or v.Name == "CulEvent" then
 		supported = true
 		game:GetService("StarterGui"):SetCore("SendNotification", {
 			Title = "Game is Supported",
@@ -638,7 +638,6 @@ for _, v in pairs(ReplicatedStorage:GetDescendants()) do
 			Duration = 5
 		})
 	else
-		supported = false
 		game:GetService("StarterGui"):SetCore("SendNotification", {
 			Title = "Game is not Supported",
 			Text = "try a different game :(",
