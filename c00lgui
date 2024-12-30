@@ -413,7 +413,29 @@ CloseOpen.Text = "Close"
 CloseOpen.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseOpen.TextSize = 18.000
 
+
+
 -- Scripts:
+local supported = false
+local ReplicatedStorage = game:GetService('ReplicatedStorage')
+for _, v in pairs(ReplicatedStorage:GetDescendants()) do
+	if v:IsA('RemoteEvent') and v.Name == 'CulEvent2' or v.Name == "CulEvent" or v.Name == 'CulEvent3' then
+		supported = true
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "Game is Supported",
+			Text = "Have Fun!",
+			Duration = 5
+		})
+	else
+		supported = false
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "Game is not Supported",
+			Text = "try a different game :(",
+			Duration = 5
+		})
+	end
+end
+
 
 local function KZMKQK_fake_script() -- SetSkybox.LocalScript 
 	local script = Instance.new('LocalScript', SetSkybox)
