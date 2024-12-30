@@ -1,4 +1,5 @@
--- Monstrum's Gui to Lua\n-- Version: 3.2
+-- Gui to Lua
+-- Version: 3.2
 
 -- Instances:
 
@@ -18,6 +19,11 @@ local TextLabel_3 = Instance.new("TextLabel")
 local TextLabel_4 = Instance.new("TextLabel")
 local TextButton_3 = Instance.new("TextButton")
 local TextButton_4 = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
 local CloseOpen = Instance.new("TextButton")
 
 --Properties:
@@ -179,6 +185,63 @@ TextButton_4.Text = ">"
 TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_4.TextSize = 48.000
 
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Frame_2.BorderSizePixel = 3
+Frame_2.Position = UDim2.new(0, 0, 0.100000001, 0)
+Frame_2.Size = UDim2.new(0, 300, 0, 308)
+Frame_2.Visible = false
+
+TextLabel_5.Parent = Frame_2
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.173333332, 0, 0.181818187, 0)
+TextLabel_5.Size = UDim2.new(0, 195, 0, 50)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "c00lgui"
+TextLabel_5.TextColor3 = Color3.fromRGB(231, 0, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 31.000
+TextLabel_5.TextWrapped = true
+
+TextLabel_6.Parent = TextLabel_5
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(-0.00333328242, 0, 0.7754547, 0)
+TextLabel_6.Size = UDim2.new(0, 200, 0, 27)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "Reborn By: mwtr"
+TextLabel_6.TextColor3 = Color3.fromRGB(231, 231, 231)
+TextLabel_6.TextSize = 23.000
+
+TextLabel_7.Parent = TextLabel_6
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(-0.0666666403, 0, 0.97570914, 0)
+TextLabel_7.Size = UDim2.new(0, 225, 0, 49)
+TextLabel_7.Font = Enum.Font.SourceSans
+TextLabel_7.Text = "Shoutout to lalol hub, SySPro(Now SxSPro) and v3rm"
+TextLabel_7.TextColor3 = Color3.fromRGB(231, 231, 231)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 23.000
+TextLabel_7.TextWrapped = true
+
+ImageLabel.Parent = Frame_2
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.336666673, 0, 0.551948071, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "rbxassetid://84535075170702"
+
 CloseOpen.Name = "Close/Open"
 CloseOpen.Parent = ScreenGui
 CloseOpen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -190,10 +253,11 @@ CloseOpen.Font = Enum.Font.SourceSans
 CloseOpen.Text = "Close"
 CloseOpen.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseOpen.TextSize = 18.000
+loadstring(game:HttpGet("https://raw.githubusercontent.com/mw-tr/C00lkidd-Propaganda-Gui/refs/heads/main/Fade"))()
 
 -- Scripts:
-
-local function JIQMVRL_script() -- SetSkybox.LocalScript 
+wait(1)
+local function UKMZWRW_fake_script() -- SetSkybox.LocalScript 
 	local script = Instance.new('LocalScript', SetSkybox)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -209,8 +273,8 @@ local function JIQMVRL_script() -- SetSkybox.LocalScript
 		
 	end)
 end
-coroutine.wrap(JIQMVRL_script)()
-local function LHKF_script() -- DecalSpam.LocalScript 
+coroutine.wrap(UKMZWRW_fake_script)()
+local function DOLVS_fake_script() -- DecalSpam.LocalScript 
 	local script = Instance.new('LocalScript', DecalSpam)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -226,8 +290,8 @@ local function LHKF_script() -- DecalSpam.LocalScript
 		
 	end)
 end
-coroutine.wrap(LHKF_script)()
-local function LZHFTM_script() -- SetFire.LocalScript 
+coroutine.wrap(DOLVS_fake_script)()
+local function SYHQO_fake_script() -- SetFire.LocalScript 
 	local script = Instance.new('LocalScript', SetFire)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -243,8 +307,8 @@ local function LZHFTM_script() -- SetFire.LocalScript
 		
 	end)
 end
-coroutine.wrap(LZHFTM_script)()
-local function HSSUPO_script() -- Frame.LocalScript 
+coroutine.wrap(SYHQO_fake_script)()
+local function GQGKK_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local supported = false
@@ -266,24 +330,170 @@ local function HSSUPO_script() -- Frame.LocalScript
 		end
 	end
 end
-coroutine.wrap(HSSUPO_script)()
-local function QNVEGIB_script() -- CloseOpen.LocalScript 
-	local script = Instance.new('LocalScript', CloseOpen)
+coroutine.wrap(GQGKK_fake_script)()
+local function XMPQ_fake_script() -- TextLabel_5.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_5)
 
-	script.Parent.MouseButton1Click:Connect(function()
-		local Frame = script.Parent.Parent:FindFirstChild("Frame")
-		if Frame then
-			if Frame.Visible then
-				Frame.Visible = false
-				script.Parent.Text = 'Open'
-			else
-				Frame.Visible = true
-				script.Parent.Text = 'Close'
-			end
-		else
-			warn("Frame not found!")
-		end
+	
+	
+	
+	
+	-- Variables
+	local TweenService = game:GetService("TweenService") -- TweenService
+	local textLabel = script.Parent -- Assuming this script is inside the TextLabel
+	
+	-- Initial position: off-screen to the right
+	textLabel.Position = UDim2.new(-0.2, -151,0.182, 0)  -- This places the TextLabel off-screen to the right
+	
+	-- Define the final position
+	local finalPosition = UDim2.new(0, 55,0, 50)  -- This is the final position on the screen
+	
+	-- Tween Info (Duration, EasingStyle, EasingDirection, Repeat Count, Reverses)
+	local tweenInfo = TweenInfo.new(
+		0.5,  -- Duration (2 seconds for the movement)
+		Enum.EasingStyle.Sine,  -- Easing style (Linear for a smooth constant speed)
+		Enum.EasingDirection.InOut,  -- Easing direction (smooth in and out)
+		0,  -- No repeat
+		false  -- No reversing
+	)
+	
+	-- Create the Tween
+	local tweenGoal = { Position = finalPosition }
+	local tween = TweenService:Create(textLabel, tweenInfo, tweenGoal)
+	
+	-- Function to reverse the tween after a delay
+	local function reverseTween()
+		-- Wait 1 second before reversing the tween
+		wait(1)
+	
+		-- Reverse the tween by creating a new tween from final position back to the start position
+		local reverseTween = TweenService:Create(textLabel, tweenInfo, { Position = UDim2.new(-0.2, -151,0.182, 0) })
+		reverseTween:Play()  -- Play the reverse tween
+	end
+	
+	-- Play the initial tween
+	tween:Play()
+	
+	-- When the initial tween completes, reverse the tween after 1 second
+	tween.Completed:Connect(function()
+		reverseTween()
 	end)
 	
 end
-coroutine.wrap(QNVEGIB_script)()
+coroutine.wrap(XMPQ_fake_script)()
+local function BKIHIA_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	
+	
+	
+	
+	
+	
+	-- Variables
+	local TweenService = game:GetService("TweenService") -- TweenService
+	local ImageLabel = script.Parent -- Assuming this script is inside the TextLabel
+	
+	-- Initial position: off-screen to the right
+	ImageLabel.Position = UDim2.new(-0.16, -60,0.525, 0)  -- This places the TextLabel off-screen to the right
+	
+	-- Define the final position
+	local finalPosition = UDim2.new(0.337, 0,0.552, 0)  -- This is the final position on the screen
+	
+	-- Tween Info (Duration, EasingStyle, EasingDirection, Repeat Count, Reverses)
+	local tweenInfo = TweenInfo.new(
+		1,  -- Duration (2 seconds for the movement)
+		Enum.EasingStyle.Circular,  -- Easing style (Linear for a smooth constant speed)
+		Enum.EasingDirection.InOut,  -- Easing direction (smooth in and out)
+		0,  -- No repeat
+		false  -- No reversing
+	)
+	
+	-- Create the Tween
+	local tweenGoal = { Position = finalPosition }
+	local tween = TweenService:Create(ImageLabel, tweenInfo, tweenGoal)
+	
+	-- Function to reverse the tween after a delay
+	local function reverseTween()
+		-- Wait 1 second before reversing the tween
+		wait(1)
+	
+		-- Reverse the tween by creating a new tween from final position back to the start position
+		local reverseTween = TweenService:Create(ImageLabel, tweenInfo, { Position = UDim2.new(-0.16, -60,0.525, 0) })
+		reverseTween:Play()  -- Play the reverse tween
+	end
+	
+	-- Play the initial tween
+	tween:Play()
+	
+	-- When the initial tween completes, reverse the tween after 1 second
+	tween.Completed:Connect(function()
+		reverseTween()
+	end)
+	
+	
+	
+	
+end
+coroutine.wrap(BKIHIA_fake_script)()
+local function DOBGW_fake_script() -- Frame_2.LocalScript 
+	local script = Instance.new('LocalScript', Frame_2)
+
+	local TweenService = game:GetService("TweenService")
+	local frameFade = script.Parent -- Assuming this script is a child of the frame you want to fade
+	
+	-- Set the initial properties (this step is optional)
+	frameFade.BackgroundTransparency = 0 -- Fully opaque
+	
+	-- Create the TweenInfo for the fade effect (1.5 seconds duration)
+	local tweenInfo = TweenInfo.new(
+		1.5, -- Duration of the fade
+		Enum.EasingStyle.Quad, -- Easing style (smooth transition)
+		Enum.EasingDirection.Out, -- Easing direction (fade out)
+		0, -- Repeat count (0 means it won't repeat)
+		false, -- Reverses the tween (set to false for one way)
+		0 -- Delay time (0 means no delay)
+	)
+	
+	-- Define the properties we want to change (BackgroundTransparency to 1)
+	local goal = { BackgroundTransparency = 1 }
+	
+	-- Create the tween
+	local tween = TweenService:Create(frameFade, tweenInfo, goal)
+	
+	-- Play the tween after 1.5 seconds
+	wait(1.9)
+	tween:Play()
+	wait(1)
+	frameFade:Destroy()
+end
+coroutine.wrap(DOBGW_fake_script)()
+local function VOGV_fake_script() -- CloseOpen.LocalScript 
+	local script = Instance.new('LocalScript', CloseOpen)
+
+	-- Instances and Properties Setup (unchanged, as shown in your original code)
+	-- (I have omitted the full setup for brevity. Make sure you include the same setup for your GUI elements)
+	
+	-- Close/Open Button functionality
+	local CloseOpen = script.Parent:WaitForChild("CloseOpen")
+	
+	-- Toggle the frame visibility when the Close/Open button is clicked
+	CloseOpen.MouseButton1Click:Connect(function()
+		-- Reference the frame that you want to open/close
+		local frame = script.Parent:WaitForChild("Frame")
+	
+		-- Toggle the visibility of the frame
+		if frame.Visible then
+			frame.Visible = false
+			CloseOpen.Text = "Open"  -- Change the text to "Open" when closed
+		else
+			frame.Visible = true
+			CloseOpen.Text = "Close"  -- Change the text to "Close" when opened
+		end
+	end)
+	
+	-- Example code for other buttons (as in your original script), unchanged
+	-- Add functionality for SetSkybox, DecalSpam, SetFire, etc.
+	
+end
+coroutine.wrap(VOGV_fake_script)()
