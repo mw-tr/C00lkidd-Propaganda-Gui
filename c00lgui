@@ -4,7 +4,7 @@
 -- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
+local CulGui = Instance.new("Frame")
 local Page1 = Instance.new("Frame")
 local ServerDestruction = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -14,6 +14,8 @@ local SetFire = Instance.new("TextButton")
 local Hint = Instance.new("TextButton")
 local Disco = Instance.new("TextButton")
 local RainingTacos = Instance.new("TextButton")
+local PlaySound = Instance.new("TextButton")
+local Soon = Instance.new("TextButton")
 local AdminRanker = Instance.new("Frame")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
@@ -28,16 +30,11 @@ local Page1_2 = Instance.new("Frame")
 local TextLabel_6 = Instance.new("TextLabel")
 local SoundId_Editor = Instance.new("Frame")
 local title = Instance.new("TextLabel")
-local TextBox = Instance.new("TextBox")
-local Kill_User = Instance.new("Frame")
-local title_2 = Instance.new("TextLabel")
-local TextBox_2 = Instance.new("TextBox")
-local Bring_User = Instance.new("Frame")
-local title_3 = Instance.new("TextLabel")
-local TextBox_3 = Instance.new("TextBox")
-local TextLabel_7 = Instance.new("TextLabel")
+local SoundText = Instance.new("TextBox")
 local TextButton_5 = Instance.new("TextButton")
+local TextLabel_7 = Instance.new("TextLabel")
 local TextButton_6 = Instance.new("TextButton")
+local TextButton_7 = Instance.new("TextButton")
 local CloseOpen = Instance.new("TextButton")
 
 --Properties:
@@ -45,15 +42,16 @@ local CloseOpen = Instance.new("TextButton")
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
-Frame.BorderSizePixel = 3
-Frame.Position = UDim2.new(0, 3, 0.300000012, 0)
-Frame.Size = UDim2.new(0, 300, 0, 400)
+CulGui.Name = "CulGui"
+CulGui.Parent = ScreenGui
+CulGui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CulGui.BorderColor3 = Color3.fromRGB(255, 0, 0)
+CulGui.BorderSizePixel = 3
+CulGui.Position = UDim2.new(0, 3, 0.300000012, 0)
+CulGui.Size = UDim2.new(0, 300, 0, 400)
 
 Page1.Name = "Page1"
-Page1.Parent = Frame
+Page1.Parent = CulGui
 Page1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Page1.BorderColor3 = Color3.fromRGB(255, 0, 0)
 Page1.BorderSizePixel = 3
@@ -151,6 +149,31 @@ RainingTacos.TextScaled = true
 RainingTacos.TextSize = 14.000
 RainingTacos.TextWrapped = true
 
+PlaySound.Name = "Play Sound"
+PlaySound.Parent = ServerDestruction
+PlaySound.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PlaySound.BorderColor3 = Color3.fromRGB(255, 0, 0)
+PlaySound.BorderSizePixel = 3
+PlaySound.Position = UDim2.new(0, 0, 0, 132)
+PlaySound.Size = UDim2.new(0.5, 0, 0, 30)
+PlaySound.Font = Enum.Font.SourceSans
+PlaySound.Text = "Play Sound"
+PlaySound.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlaySound.TextSize = 14.000
+
+Soon.Name = "Soon"
+Soon.Parent = ServerDestruction
+Soon.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Soon.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Soon.BorderSizePixel = 3
+Soon.Position = UDim2.new(0, 78, 0, 132)
+Soon.Size = UDim2.new(0.5, 0, 0, 30)
+Soon.Font = Enum.Font.SourceSans
+Soon.Text = "Text Above All Players"
+Soon.TextColor3 = Color3.fromRGB(255, 255, 255)
+Soon.TextSize = 14.000
+Soon.TextWrapped = true
+
 AdminRanker.Name = "Admin Ranker"
 AdminRanker.Parent = Page1
 AdminRanker.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -203,7 +226,7 @@ TextLabel_3.Text = "Page 1"
 TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextSize = 29.000
 
-TextLabel_4.Parent = Frame
+TextLabel_4.Parent = CulGui
 TextLabel_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_4.BorderColor3 = Color3.fromRGB(255, 0, 0)
 TextLabel_4.BorderSizePixel = 3
@@ -214,7 +237,7 @@ TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.TextSize = 24.000
 
 TextButton_3.Name = "<"
-TextButton_3.Parent = Frame
+TextButton_3.Parent = CulGui
 TextButton_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
 TextButton_3.BorderSizePixel = 3
@@ -226,7 +249,7 @@ TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_3.TextSize = 48.000
 
 TextButton_4.Name = ">"
-TextButton_4.Parent = Frame
+TextButton_4.Parent = CulGui
 TextButton_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_4.BorderColor3 = Color3.fromRGB(255, 0, 0)
 TextButton_4.BorderSizePixel = 3
@@ -238,7 +261,7 @@ TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_4.TextSize = 48.000
 
 Settings.Name = "Settings"
-Settings.Parent = Frame
+Settings.Parent = CulGui
 Settings.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Settings.BorderColor3 = Color3.fromRGB(255, 0, 0)
 Settings.BorderSizePixel = 3
@@ -297,86 +320,32 @@ title.Text = "SoundID"
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.TextSize = 20.000
 
-TextBox.Parent = SoundId_Editor
-TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.BorderColor3 = Color3.fromRGB(255, 0, 0)
-TextBox.BorderSizePixel = 3
-TextBox.Position = UDim2.new(0.50999999, 0, -0.0151515156, -1)
-TextBox.Size = UDim2.new(0, 147, 0, 33)
-TextBox.Font = Enum.Font.SourceSans
-TextBox.PlaceholderText = "Hint Here 'Team C00lkidd 4 Join today!'"
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.TextSize = 14.000
-TextBox.TextWrapped = true
+SoundText.Name = "SoundText"
+SoundText.Parent = SoundId_Editor
+SoundText.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SoundText.BorderColor3 = Color3.fromRGB(255, 0, 0)
+SoundText.BorderSizePixel = 3
+SoundText.Position = UDim2.new(0.50999999, 0, -0.0151515156, -1)
+SoundText.Size = UDim2.new(0, 147, 0, 33)
+SoundText.Font = Enum.Font.SourceSans
+SoundText.PlaceholderText = "Hint Here 'Team C00lkidd 4 Join today!'"
+SoundText.Text = ""
+SoundText.TextColor3 = Color3.fromRGB(255, 255, 255)
+SoundText.TextSize = 14.000
+SoundText.TextWrapped = true
 
-Kill_User.Name = "Kill_User"
-Kill_User.Parent = Page1_2
-Kill_User.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Kill_User.BackgroundTransparency = 1.000
-Kill_User.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Kill_User.BorderSizePixel = 0
-Kill_User.Position = UDim2.new(0, 0, 0, 79)
-Kill_User.Size = UDim2.new(1, 0, -0.10410095, 66)
-
-title_2.Name = "title"
-title_2.Parent = Kill_User
-title_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-title_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
-title_2.BorderSizePixel = 3
-title_2.Position = UDim2.new(0, 0, 0, -1)
-title_2.Size = UDim2.new(0.5, 0, 0.0909090936, 30)
-title_2.Font = Enum.Font.SourceSans
-title_2.Text = "Kill"
-title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-title_2.TextSize = 20.000
-
-TextBox_2.Parent = Kill_User
-TextBox_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextBox_2.BorderColor3 = Color3.fromRGB(255, 0, 0)
-TextBox_2.BorderSizePixel = 3
-TextBox_2.Position = UDim2.new(0.50999999, 0, -0.0151515156, -1)
-TextBox_2.Size = UDim2.new(0, 147, 0, 33)
-TextBox_2.Font = Enum.Font.SourceSans
-TextBox_2.PlaceholderText = "Hint Here 'Team C00lkidd 4 Join today!'"
-TextBox_2.Text = ""
-TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox_2.TextSize = 14.000
-TextBox_2.TextWrapped = true
-
-Bring_User.Name = "Bring_User"
-Bring_User.Parent = Page1_2
-Bring_User.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Bring_User.BackgroundTransparency = 1.000
-Bring_User.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Bring_User.BorderSizePixel = 0
-Bring_User.Position = UDim2.new(0, 0, 0, 115)
-Bring_User.Size = UDim2.new(1, 0, -0.10410095, 66)
-
-title_3.Name = "title"
-title_3.Parent = Bring_User
-title_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-title_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
-title_3.BorderSizePixel = 3
-title_3.Position = UDim2.new(0, 0, 0, -1)
-title_3.Size = UDim2.new(0.5, 0, 0.0909090936, 30)
-title_3.Font = Enum.Font.SourceSans
-title_3.Text = "Bring"
-title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-title_3.TextSize = 20.000
-
-TextBox_3.Parent = Bring_User
-TextBox_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextBox_3.BorderColor3 = Color3.fromRGB(255, 0, 0)
-TextBox_3.BorderSizePixel = 3
-TextBox_3.Position = UDim2.new(0.50999999, 0, -0.0151515156, -1)
-TextBox_3.Size = UDim2.new(0, 147, 0, 33)
-TextBox_3.Font = Enum.Font.SourceSans
-TextBox_3.PlaceholderText = "Hint Here 'Team C00lkidd 4 Join today!'"
-TextBox_3.Text = ""
-TextBox_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox_3.TextSize = 14.000
-TextBox_3.TextWrapped = true
+TextButton_5.Parent = SoundId_Editor
+TextButton_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_5.BorderSizePixel = 3
+TextButton_5.Position = UDim2.new(0, 0, 0.969696999, 0)
+TextButton_5.Size = UDim2.new(0, 300, 0, 15)
+TextButton_5.Font = Enum.Font.SourceSans
+TextButton_5.Text = "Looped = false"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 22.000
+TextButton_5.TextWrapped = true
 
 TextLabel_7.Parent = Page1_2
 TextLabel_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -392,29 +361,29 @@ TextLabel_7.TextScaled = true
 TextLabel_7.TextSize = 29.000
 TextLabel_7.TextWrapped = true
 
-TextButton_5.Name = ">"
-TextButton_5.Parent = Settings
-TextButton_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_5.BorderColor3 = Color3.fromRGB(255, 0, 0)
-TextButton_5.BorderSizePixel = 3
-TextButton_5.Position = UDim2.new(0.5, 3, 0, 40)
-TextButton_5.Size = UDim2.new(0.5, -3, 0, 40)
-TextButton_5.Font = Enum.Font.SourceSans
-TextButton_5.Text = ">"
-TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_5.TextSize = 48.000
-
-TextButton_6.Name = "<"
+TextButton_6.Name = ">"
 TextButton_6.Parent = Settings
 TextButton_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_6.BorderColor3 = Color3.fromRGB(255, 0, 0)
 TextButton_6.BorderSizePixel = 3
-TextButton_6.Position = UDim2.new(0, 0, 0, 40)
-TextButton_6.Size = UDim2.new(0.5, 0, 0, 40)
+TextButton_6.Position = UDim2.new(0.5, 3, 0, 40)
+TextButton_6.Size = UDim2.new(0.5, -3, 0, 40)
 TextButton_6.Font = Enum.Font.SourceSans
-TextButton_6.Text = "<"
+TextButton_6.Text = ">"
 TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_6.TextSize = 48.000
+
+TextButton_7.Name = "<"
+TextButton_7.Parent = Settings
+TextButton_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_7.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_7.BorderSizePixel = 3
+TextButton_7.Position = UDim2.new(0, 0, 0, 40)
+TextButton_7.Size = UDim2.new(0.5, 0, 0, 40)
+TextButton_7.Font = Enum.Font.SourceSans
+TextButton_7.Text = "<"
+TextButton_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_7.TextSize = 48.000
 
 CloseOpen.Name = "Close/Open"
 CloseOpen.Parent = ScreenGui
@@ -427,221 +396,10 @@ CloseOpen.Font = Enum.Font.SourceSans
 CloseOpen.Text = "Close"
 CloseOpen.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseOpen.TextSize = 18.000
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextLabel_3 = Instance.new("TextLabel")
-local ImageLabel = Instance.new("ImageLabel")
-
---Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
-Frame.BorderSizePixel = 3
-Frame.Position = UDim2.new(0.002, 0,0.367, 0)
-Frame.Size = UDim2.new(0, 300, 0, 308)
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.173333332, 0, 0.181818187, 0)
-TextLabel.Size = UDim2.new(0, 195, 0, 50)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "c00lgui"
-TextLabel.TextColor3 = Color3.fromRGB(231, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 31.000
-TextLabel.TextWrapped = true
-
-TextLabel_2.Parent = TextLabel
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(-0.00333328242, 0, 0.7754547, 0)
-TextLabel_2.Size = UDim2.new(0, 200, 0, 27)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Reborn By: mwtr"
-TextLabel_2.TextColor3 = Color3.fromRGB(231, 231, 231)
-TextLabel_2.TextSize = 23.000
-
-TextLabel_3.Parent = TextLabel_2
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(-0.0666666403, 0, 0.97570914, 0)
-TextLabel_3.Size = UDim2.new(0, 225, 0, 49)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "Shoutout to lalol hub, SySPro(Now SxSPro) and v3rm"
-TextLabel_3.TextColor3 = Color3.fromRGB(231, 231, 231)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 23.000
-TextLabel_3.TextWrapped = true
-
-ImageLabel.Parent = Frame
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.336666673, 0, 0.551948071, 0)
-ImageLabel.Size = UDim2.new(0, 100, 0, 100)
-ImageLabel.Image = "rbxassetid://84535075170702"
 
 -- Scripts:
 
-local function DYYPN_fake_script() -- TextLabel.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel)
-
-	
-	
-	
-	
-	-- Variables
-	local TweenService = game:GetService("TweenService") -- TweenService
-	local textLabel = script.Parent -- Assuming this script is inside the TextLabel
-	
-	-- Initial position: off-screen to the right
-	textLabel.Position = UDim2.new(-0.2, -151,0.182, 0)  -- This places the TextLabel off-screen to the right
-	
-	-- Define the final position
-	local finalPosition = UDim2.new(0, 55,0, 50)  -- This is the final position on the screen
-	
-	-- Tween Info (Duration, EasingStyle, EasingDirection, Repeat Count, Reverses)
-	local tweenInfo = TweenInfo.new(
-		0.5,  -- Duration (2 seconds for the movement)
-		Enum.EasingStyle.Sine,  -- Easing style (Linear for a smooth constant speed)
-		Enum.EasingDirection.InOut,  -- Easing direction (smooth in and out)
-		0,  -- No repeat
-		false  -- No reversing
-	)
-	
-	-- Create the Tween
-	local tweenGoal = { Position = finalPosition }
-	local tween = TweenService:Create(textLabel, tweenInfo, tweenGoal)
-	
-	-- Function to reverse the tween after a delay
-	local function reverseTween()
-		-- Wait 1 second before reversing the tween
-		wait(1)
-	
-		-- Reverse the tween by creating a new tween from final position back to the start position
-		local reverseTween = TweenService:Create(textLabel, tweenInfo, { Position = UDim2.new(-0.2, -151,0.182, 0) })
-		reverseTween:Play()  -- Play the reverse tween
-	end
-	
-	-- Play the initial tween
-	tween:Play()
-	
-	-- When the initial tween completes, reverse the tween after 1 second
-	tween.Completed:Connect(function()
-		reverseTween()
-	end)
-	
-end
-coroutine.wrap(DYYPN_fake_script)()
-local function VOCOY_fake_script() -- ImageLabel.LocalScript 
-	local script = Instance.new('LocalScript', ImageLabel)
-
-	
-	
-	
-	
-	
-	
-	-- Variables
-	local TweenService = game:GetService("TweenService") -- TweenService
-	local ImageLabel = script.Parent -- Assuming this script is inside the TextLabel
-	
-	-- Initial position: off-screen to the right
-	ImageLabel.Position = UDim2.new(-0.16, -60,0.525, 0)  -- This places the TextLabel off-screen to the right
-	
-	-- Define the final position
-	local finalPosition = UDim2.new(0.337, 0,0.552, 0)  -- This is the final position on the screen
-	
-	-- Tween Info (Duration, EasingStyle, EasingDirection, Repeat Count, Reverses)
-	local tweenInfo = TweenInfo.new(
-		1,  -- Duration (2 seconds for the movement)
-		Enum.EasingStyle.Circular,  -- Easing style (Linear for a smooth constant speed)
-		Enum.EasingDirection.InOut,  -- Easing direction (smooth in and out)
-		0,  -- No repeat
-		false  -- No reversing
-	)
-	
-	-- Create the Tween
-	local tweenGoal = { Position = finalPosition }
-	local tween = TweenService:Create(ImageLabel, tweenInfo, tweenGoal)
-	
-	-- Function to reverse the tween after a delay
-	local function reverseTween()
-		-- Wait 1 second before reversing the tween
-		wait(1)
-	
-		-- Reverse the tween by creating a new tween from final position back to the start position
-		local reverseTween = TweenService:Create(ImageLabel, tweenInfo, { Position = UDim2.new(-0.16, -60,0.525, 0) })
-		reverseTween:Play()  -- Play the reverse tween
-	end
-	
-	-- Play the initial tween
-	tween:Play()
-	
-	-- When the initial tween completes, reverse the tween after 1 second
-	tween.Completed:Connect(function()
-		reverseTween()
-	end)
-	
-	
-	
-	
-end
-coroutine.wrap(VOCOY_fake_script)()
-local function VPOZ_fake_script() -- Frame.LocalScript 
-	local script = Instance.new('LocalScript', Frame)
-
-	local TweenService = game:GetService("TweenService")
-	local frameFade = script.Parent -- Assuming this script is a child of the frame you want to fade
-	
-	-- Set the initial properties (this step is optional)
-	frameFade.BackgroundTransparency = 0 -- Fully opaque
-	
-	-- Create the TweenInfo for the fade effect (1.5 seconds duration)
-	local tweenInfo = TweenInfo.new(
-		1.5, -- Duration of the fade
-		Enum.EasingStyle.Quad, -- Easing style (smooth transition)
-		Enum.EasingDirection.Out, -- Easing direction (fade out)
-		0, -- Repeat count (0 means it won't repeat)
-		false, -- Reverses the tween (set to false for one way)
-		0 -- Delay time (0 means no delay)
-	)
-	
-	-- Define the properties we want to change (BackgroundTransparency to 1)
-	local goal = { BackgroundTransparency = 1 }
-	
-	-- Create the tween
-	local tween = TweenService:Create(frameFade, tweenInfo, goal)
-	
-	-- Play the tween after 1.5 seconds
-	wait(1.9)
-	tween:Play()
-	wait(1)
-	frameFade:Destroy()
-end
-coroutine.wrap(VPOZ_fake_script)()
--- Scripts:
-
-local function CAYC_fake_script() -- SetSkybox.LocalScript 
+local function MIDO_fake_script() -- SetSkybox.LocalScript 
 	local script = Instance.new('LocalScript', SetSkybox)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -657,8 +415,8 @@ local function CAYC_fake_script() -- SetSkybox.LocalScript
 		
 	end)
 end
-coroutine.wrap(CAYC_fake_script)()
-local function NKUDTB_fake_script() -- DecalSpam.LocalScript 
+coroutine.wrap(MIDO_fake_script)()
+local function JARAQJU_fake_script() -- DecalSpam.LocalScript 
 	local script = Instance.new('LocalScript', DecalSpam)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -674,8 +432,8 @@ local function NKUDTB_fake_script() -- DecalSpam.LocalScript
 		
 	end)
 end
-coroutine.wrap(NKUDTB_fake_script)()
-local function ODKZH_fake_script() -- SetFire.LocalScript 
+coroutine.wrap(JARAQJU_fake_script)()
+local function SZUQVY_fake_script() -- SetFire.LocalScript 
 	local script = Instance.new('LocalScript', SetFire)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -691,8 +449,8 @@ local function ODKZH_fake_script() -- SetFire.LocalScript
 		
 	end)
 end
-coroutine.wrap(ODKZH_fake_script)()
-local function PPID_fake_script() -- Hint.LocalScript 
+coroutine.wrap(SZUQVY_fake_script)()
+local function WAAUDEB_fake_script() -- Hint.LocalScript 
 	local script = Instance.new('LocalScript', Hint)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -708,8 +466,8 @@ local function PPID_fake_script() -- Hint.LocalScript
 		
 	end)
 end
-coroutine.wrap(PPID_fake_script)()
-local function XZGAO_fake_script() -- Disco.LocalScript 
+coroutine.wrap(WAAUDEB_fake_script)()
+local function RISF_fake_script() -- Disco.LocalScript 
 	local script = Instance.new('LocalScript', Disco)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -725,8 +483,8 @@ local function XZGAO_fake_script() -- Disco.LocalScript
 		
 	end)
 end
-coroutine.wrap(XZGAO_fake_script)()
-local function CCXXC_fake_script() -- RainingTacos.LocalScript 
+coroutine.wrap(RISF_fake_script)()
+local function FCHTTL_fake_script() -- RainingTacos.LocalScript 
 	local script = Instance.new('LocalScript', RainingTacos)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -746,9 +504,43 @@ local function CCXXC_fake_script() -- RainingTacos.LocalScript
 		
 	end)
 end
-coroutine.wrap(CCXXC_fake_script)()
-local function IZPITCF_fake_script() -- Frame.LocalScript 
-	local script = Instance.new('LocalScript', Frame)
+coroutine.wrap(FCHTTL_fake_script)()
+local function GSIZKW_fake_script() -- PlaySound.LocalScript 
+	local script = Instance.new('LocalScript', PlaySound)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	local ReplicatedStorage = game:GetService('ReplicatedStorage')
+		local remoteevent8 = ReplicatedStorage:WaitForChild('UniversalEvent')
+	--	local txt = script.Parent.Parent.TextLabel
+		
+	if remoteevent8 then
+			remoteevent8:FireServer('culEvent8')
+		else
+			print('Game not supported')
+		end
+		
+	end)
+end
+coroutine.wrap(GSIZKW_fake_script)()
+local function QKBYVVE_fake_script() -- Soon.LocalScript 
+	local script = Instance.new('LocalScript', Soon)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local ReplicatedStorage = game:GetService('ReplicatedStorage')
+		local remoteevent9 = ReplicatedStorage:WaitForChild('UniversalEvent')
+		--	local txt = script.Parent.Parent.TextLabel
+	
+		if remoteevent9 then
+			remoteevent9:FireServer('culEvent9')
+		else
+			print('Game not supported')
+		end
+	
+	end)
+end
+coroutine.wrap(QKBYVVE_fake_script)()
+local function HGSKAG_fake_script() -- CulGui.LocalScript 
+	local script = Instance.new('LocalScript', CulGui)
 
 	local supported = false
 	local ReplicatedStorage = game:GetService('ReplicatedStorage')
@@ -777,20 +569,20 @@ local function IZPITCF_fake_script() -- Frame.LocalScript
 	end
 	
 end
-coroutine.wrap(IZPITCF_fake_script)()
-local function EYCT_fake_script() -- CloseOpen.LocalScript 
+coroutine.wrap(HGSKAG_fake_script)()
+local function KUASL_fake_script() -- CloseOpen.LocalScript 
 	local script = Instance.new('LocalScript', CloseOpen)
 
 	-- Instances and Properties Setup (unchanged, as shown in your original code)
 	-- (I have omitted the full setup for brevity. Make sure you include the same setup for your GUI elements)
 	
 	-- Close/Open Button functionality
-	local CloseOpen = script.Parent:WaitForChild("CloseOpen")
+	local CloseOpen = script.Parent
 	
 	-- Toggle the frame visibility when the Close/Open button is clicked
 	CloseOpen.MouseButton1Click:Connect(function()
 		-- Reference the frame that you want to open/close
-		local frame = script.Parent:WaitForChild("Frame")
+		local frame = script.Parent:WaitForChild("CulGui")
 	
 		-- Toggle the visibility of the frame
 		if frame.Visible then
@@ -806,4 +598,4 @@ local function EYCT_fake_script() -- CloseOpen.LocalScript
 	-- Add functionality for SetSkybox, DecalSpam, SetFire, etc.
 	
 end
-coroutine.wrap(EYCT_fake_script)()
+coroutine.wrap(KUASL_fake_script)()
