@@ -396,7 +396,218 @@ CloseOpen.Font = Enum.Font.SourceSans
 CloseOpen.Text = "Close"
 CloseOpen.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseOpen.TextSize = 18.000
+-- Gui to Lua
+-- Version: 3.2
 
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Frame.BorderSizePixel = 3
+Frame.Position = UDim2.new(0.002, 0,0.367, 0)
+Frame.Size = UDim2.new(0, 300, 0, 308)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.173333332, 0, 0.181818187, 0)
+TextLabel.Size = UDim2.new(0, 195, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "c00lgui"
+TextLabel.TextColor3 = Color3.fromRGB(231, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 31.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = TextLabel
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(-0.00333328242, 0, 0.7754547, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 27)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Reborn By: mwtr"
+TextLabel_2.TextColor3 = Color3.fromRGB(231, 231, 231)
+TextLabel_2.TextSize = 23.000
+
+TextLabel_3.Parent = TextLabel_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(-0.0666666403, 0, 0.97570914, 0)
+TextLabel_3.Size = UDim2.new(0, 225, 0, 49)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Shoutout to lalol hub, SySPro(Now SxSPro) and v3rm"
+TextLabel_3.TextColor3 = Color3.fromRGB(231, 231, 231)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 23.000
+TextLabel_3.TextWrapped = true
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.336666673, 0, 0.551948071, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "rbxassetid://84535075170702"
+
+-- Scripts:
+
+local function DYYPN_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	
+	
+	
+	
+	-- Variables
+	local TweenService = game:GetService("TweenService") -- TweenService
+	local textLabel = script.Parent -- Assuming this script is inside the TextLabel
+	
+	-- Initial position: off-screen to the right
+	textLabel.Position = UDim2.new(-0.2, -151,0.182, 0)  -- This places the TextLabel off-screen to the right
+	
+	-- Define the final position
+	local finalPosition = UDim2.new(0, 55,0, 50)  -- This is the final position on the screen
+	
+	-- Tween Info (Duration, EasingStyle, EasingDirection, Repeat Count, Reverses)
+	local tweenInfo = TweenInfo.new(
+		0.5,  -- Duration (2 seconds for the movement)
+		Enum.EasingStyle.Sine,  -- Easing style (Linear for a smooth constant speed)
+		Enum.EasingDirection.InOut,  -- Easing direction (smooth in and out)
+		0,  -- No repeat
+		false  -- No reversing
+	)
+	
+	-- Create the Tween
+	local tweenGoal = { Position = finalPosition }
+	local tween = TweenService:Create(textLabel, tweenInfo, tweenGoal)
+	
+	-- Function to reverse the tween after a delay
+	local function reverseTween()
+		-- Wait 1 second before reversing the tween
+		wait(1)
+	
+		-- Reverse the tween by creating a new tween from final position back to the start position
+		local reverseTween = TweenService:Create(textLabel, tweenInfo, { Position = UDim2.new(-0.2, -151,0.182, 0) })
+		reverseTween:Play()  -- Play the reverse tween
+	end
+	
+	-- Play the initial tween
+	tween:Play()
+	
+	-- When the initial tween completes, reverse the tween after 1 second
+	tween.Completed:Connect(function()
+		reverseTween()
+	end)
+	
+end
+coroutine.wrap(DYYPN_fake_script)()
+local function VOCOY_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	
+	
+	
+	
+	
+	
+	-- Variables
+	local TweenService = game:GetService("TweenService") -- TweenService
+	local ImageLabel = script.Parent -- Assuming this script is inside the TextLabel
+	
+	-- Initial position: off-screen to the right
+	ImageLabel.Position = UDim2.new(-0.16, -60,0.525, 0)  -- This places the TextLabel off-screen to the right
+	
+	-- Define the final position
+	local finalPosition = UDim2.new(0.337, 0,0.552, 0)  -- This is the final position on the screen
+	
+	-- Tween Info (Duration, EasingStyle, EasingDirection, Repeat Count, Reverses)
+	local tweenInfo = TweenInfo.new(
+		1,  -- Duration (2 seconds for the movement)
+		Enum.EasingStyle.Circular,  -- Easing style (Linear for a smooth constant speed)
+		Enum.EasingDirection.InOut,  -- Easing direction (smooth in and out)
+		0,  -- No repeat
+		false  -- No reversing
+	)
+	
+	-- Create the Tween
+	local tweenGoal = { Position = finalPosition }
+	local tween = TweenService:Create(ImageLabel, tweenInfo, tweenGoal)
+	
+	-- Function to reverse the tween after a delay
+	local function reverseTween()
+		-- Wait 1 second before reversing the tween
+		wait(1)
+	
+		-- Reverse the tween by creating a new tween from final position back to the start position
+		local reverseTween = TweenService:Create(ImageLabel, tweenInfo, { Position = UDim2.new(-0.16, -60,0.525, 0) })
+		reverseTween:Play()  -- Play the reverse tween
+	end
+	
+	-- Play the initial tween
+	tween:Play()
+	
+	-- When the initial tween completes, reverse the tween after 1 second
+	tween.Completed:Connect(function()
+		reverseTween()
+	end)
+	
+	
+	
+	
+end
+coroutine.wrap(VOCOY_fake_script)()
+local function VPOZ_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local TweenService = game:GetService("TweenService")
+	local frameFade = script.Parent -- Assuming this script is a child of the frame you want to fade
+	
+	-- Set the initial properties (this step is optional)
+	frameFade.BackgroundTransparency = 0 -- Fully opaque
+	
+	-- Create the TweenInfo for the fade effect (1.5 seconds duration)
+	local tweenInfo = TweenInfo.new(
+		1.5, -- Duration of the fade
+		Enum.EasingStyle.Quad, -- Easing style (smooth transition)
+		Enum.EasingDirection.Out, -- Easing direction (fade out)
+		0, -- Repeat count (0 means it won't repeat)
+		false, -- Reverses the tween (set to false for one way)
+		0 -- Delay time (0 means no delay)
+	)
+	
+	-- Define the properties we want to change (BackgroundTransparency to 1)
+	local goal = { BackgroundTransparency = 1 }
+	
+	-- Create the tween
+	local tween = TweenService:Create(frameFade, tweenInfo, goal)
+	
+	-- Play the tween after 1.5 seconds
+	wait(1.9)
+	tween:Play()
+	wait(1)
+	frameFade:Destroy()
+end
+coroutine.wrap(VPOZ_fake_script)()
 -- Scripts:
 
 local function MIDO_fake_script() -- SetSkybox.LocalScript 
